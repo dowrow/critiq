@@ -5,29 +5,22 @@ import UploadForm from "@/components/UploadForm";
 import Results from "@/components/Results";
 import { CritiqueResult } from "@/lib/openai";
 import { useLang } from "@/context/LangContext";
+import styles from "./page.module.css";
 
 function LangToggle() {
   const { lang, setLang } = useLang();
   return (
-    <div className="flex items-center gap-1 rounded-full border border-stone-200 bg-stone-50 p-0.5 text-xs font-semibold">
+    <div className={styles.langToggle}>
       <button
         onClick={() => setLang("es")}
-        className={`rounded-full px-2.5 py-1 transition-colors ${
-          lang === "es"
-            ? "bg-amber-600 text-white shadow-sm"
-            : "text-stone-400 hover:text-stone-700"
-        }`}
+        className={`${styles.langBtn} ${lang === "es" ? styles.langBtnActive : ""}`}
         aria-pressed={lang === "es"}
       >
         ES
       </button>
       <button
         onClick={() => setLang("en")}
-        className={`rounded-full px-2.5 py-1 transition-colors ${
-          lang === "en"
-            ? "bg-amber-600 text-white shadow-sm"
-            : "text-stone-400 hover:text-stone-700"
-        }`}
+        className={`${styles.langBtn} ${lang === "en" ? styles.langBtnActive : ""}`}
         aria-pressed={lang === "en"}
       >
         EN
@@ -52,91 +45,71 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-100 to-amber-50">
+    <div className={styles.page}>
       {/* Header */}
-      <header className="border-b border-stone-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">✍️</span>
-            <span className="font-bold text-xl text-stone-800">critiq</span>
+      <header className={styles.header}>
+        <div className={styles.headerInner}>
+          <div className={styles.logo}>
+            <span className={styles.logoEmoji}>✍️</span>
+            <span className={styles.logoText}>critiq</span>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-xs text-stone-400 hidden sm:block">
-              {t.tagline}
-            </span>
+          <div className={styles.headerRight}>
+            <span className={styles.tagline}>{t.tagline}</span>
             <LangToggle />
           </div>
         </div>
       </header>
 
-      <main className="max-w-3xl mx-auto px-4 py-10">
+      <main className={styles.main}>
         {!result ? (
-          <div className="flex flex-col gap-8">
+          <div className={styles.uploadPage}>
             {/* Hero */}
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-stone-800 mb-4">
+            <div className={styles.hero}>
+              <h1 className={styles.heroTitle}>
                 {t.heroTitle1}
                 <br />
-                <span className="text-amber-600">{t.heroTitle2}</span>
+                <span className={styles.heroAccent}>{t.heroTitle2}</span>
               </h1>
-              <p className="text-stone-500 text-lg max-w-xl mx-auto">
-                {t.heroSubtitle}
-              </p>
+              <p className={styles.heroSubtitle}>{t.heroSubtitle}</p>
             </div>
 
             {/* Rubric preview */}
-            <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-6">
-              <h2 className="font-bold text-stone-700 mb-4 text-sm uppercase tracking-wider">
-                {t.rubricTitle}
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+            <div className={styles.card}>
+              <h2 className={styles.sectionTitle}>{t.rubricTitle}</h2>
+              <div className={styles.rubricGrid}>
                 {t.rubricCategories.map((cat) => (
-                  <div
-                    key={cat.name}
-                    className="flex justify-between items-center py-1.5 px-3 rounded-lg bg-stone-50"
-                  >
-                    <span className="text-stone-600">{cat.name}</span>
-                    <span className="text-amber-600 font-semibold">
-                      {cat.weight}
-                    </span>
+                  <div key={cat.name} className={styles.rubricItem}>
+                    <span className={styles.rubricName}>{cat.name}</span>
+                    <span className={styles.rubricWeight}>{cat.weight}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Upload form */}
-            <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-6">
+            <div className={styles.card}>
               <UploadForm
                 onResult={handleResult}
                 onError={setError}
                 onLoading={setIsLoading}
                 isLoading={isLoading}
               />
-              {error && (
-                <div className="mt-4 rounded-xl bg-red-50 border border-red-200 p-4 text-red-700 text-sm">
-                  {error}
-                </div>
-              )}
+              {error && <div className={styles.errorBox}>{error}</div>}
             </div>
           </div>
         ) : (
-          <div className="flex flex-col gap-6">
-            <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-6 sm:p-8">
+          <div className={styles.resultsPage}>
+            <div className={styles.resultCard}>
               <Results result={result} />
             </div>
-            <button
-              onClick={handleReset}
-              className="mx-auto flex items-center gap-2 text-stone-500 hover:text-amber-600 transition-colors text-sm font-medium"
-            >
+            <button onClick={handleReset} className={styles.backButton}>
               {t.backButton}
             </button>
           </div>
         )}
       </main>
 
-      <footer className="max-w-3xl mx-auto px-4 py-6 text-center text-xs text-stone-400">
-        critiq · {t.footer}
-      </footer>
+      <footer className={styles.footer}>critiq · {t.footer}</footer>
     </div>
   );
 }

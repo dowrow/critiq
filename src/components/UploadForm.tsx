@@ -2,6 +2,7 @@
 
 import { useState, useRef, DragEvent, ChangeEvent } from "react";
 import { useLang } from "@/context/LangContext";
+import styles from "./UploadForm.module.css";
 
 interface UploadFormProps {
   onResult: (result: unknown) => void;
@@ -32,7 +33,10 @@ export default function UploadForm({
 
   function validateFile(file: File): string | null {
     const ext = "." + file.name.split(".").pop()?.toLowerCase();
-    if (!ACCEPTED_EXTENSIONS.includes(ext) && !ACCEPTED_TYPES.includes(file.type)) {
+    if (
+      !ACCEPTED_EXTENSIONS.includes(ext) &&
+      !ACCEPTED_TYPES.includes(file.type)
+    ) {
       return t.unsupportedFormat(ext);
     }
     if (file.size > 50 * 1024 * 1024) {
@@ -96,12 +100,19 @@ export default function UploadForm({
     }
   }
 
+  const dropzoneClass = `${styles.dropzone} ${
+    dragOver ? styles.dropzoneOver : styles.dropzoneDefault
+  }`;
+
+  const submitBtnClass = `${styles.submitBtn} ${
+    isLoading || !selectedFile ? styles.submitBtnDisabled : styles.submitBtnActive
+  }`;
+
   return (
-    <div className="flex flex-col gap-6">
+    <div className={styles.form}>
       {/* Drop zone */}
       <div
-        className={`relative flex flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed p-10 cursor-pointer transition-colors
-          ${dragOver ? "border-amber-500 bg-amber-50" : "border-stone-300 bg-stone-50 hover:border-amber-400 hover:bg-amber-50/50"}`}
+        className={dropzoneClass}
         onDragOver={(e) => {
           e.preventDefault();
           setDragOver(true);
@@ -118,24 +129,24 @@ export default function UploadForm({
           ref={fileInputRef}
           type="file"
           accept=".pdf,.docx,.doc,.txt"
-          className="sr-only"
+          className={styles.srOnly}
           onChange={handleInputChange}
           aria-label={t.fileSelectorLabel}
         />
 
-        <div className="text-5xl">📄</div>
+        <div className={styles.icon}>📄</div>
 
         {selectedFile ? (
-          <div className="text-center">
-            <p className="font-semibold text-stone-800">{selectedFile.name}</p>
-            <p className="text-sm text-stone-500 mt-1">
+          <div className={styles.fileInfo}>
+            <p className={styles.fileName}>{selectedFile.name}</p>
+            <p className={styles.fileMeta}>
               {(selectedFile.size / 1024).toFixed(1)} KB · {t.dropzoneChange}
             </p>
           </div>
         ) : (
-          <div className="text-center">
-            <p className="font-semibold text-stone-700">{t.dropzonePrompt}</p>
-            <p className="text-sm text-stone-500 mt-1">{t.dropzoneHint}</p>
+          <div className={styles.prompt}>
+            <p className={styles.promptText}>{t.dropzonePrompt}</p>
+            <p className={styles.promptHint}>{t.dropzoneHint}</p>
           </div>
         )}
       </div>
@@ -144,22 +155,17 @@ export default function UploadForm({
       <button
         onClick={handleSubmit}
         disabled={isLoading || !selectedFile}
-        className={`w-full rounded-xl py-3 px-6 font-semibold text-white transition-all
-          ${
-            isLoading || !selectedFile
-              ? "bg-stone-300 cursor-not-allowed"
-              : "bg-amber-600 hover:bg-amber-700 active:scale-[0.98] shadow-md hover:shadow-lg"
-          }`}
+        className={submitBtnClass}
       >
         {isLoading ? (
-          <span className="flex items-center justify-center gap-2">
+          <span className={styles.spinner}>
             <svg
-              className="animate-spin h-5 w-5"
+              className={styles.spinnerIcon}
               viewBox="0 0 24 24"
               fill="none"
             >
               <circle
-                className="opacity-25"
+                style={{ opacity: 0.25 }}
                 cx="12"
                 cy="12"
                 r="10"
@@ -167,7 +173,7 @@ export default function UploadForm({
                 strokeWidth="4"
               />
               <path
-                className="opacity-75"
+                style={{ opacity: 0.75 }}
                 fill="currentColor"
                 d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
               />
