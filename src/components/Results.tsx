@@ -1,4 +1,6 @@
 import { CritiqueResult } from "@/lib/openai";
+import { useLang } from "@/context/LangContext";
+import { gradeBadge } from "@/lib/i18n";
 
 interface ResultsProps {
   result: CritiqueResult;
@@ -9,15 +11,6 @@ function gradeColor(nota: number): string {
   if (nota >= 6) return "text-amber-600";
   if (nota >= 4) return "text-orange-600";
   return "text-red-600";
-}
-
-function gradeBadge(nota: number): string {
-  if (nota >= 9) return "Excelente";
-  if (nota >= 8) return "Notable";
-  if (nota >= 7) return "Bien";
-  if (nota >= 6) return "Suficiente";
-  if (nota >= 5) return "Aprobado";
-  return "Necesita trabajo";
 }
 
 function ScoreBar({ score }: { score: number }) {
@@ -47,13 +40,14 @@ function ScoreBar({ score }: { score: number }) {
 }
 
 export default function Results({ result }: ResultsProps) {
+  const { t } = useLang();
   const nota = result.nota_final;
 
   return (
     <div className="flex flex-col gap-8 animate-fadeIn">
       {/* Title + Grade */}
       <div className="text-center">
-        {result.titulo && result.titulo !== "Sin título" && (
+        {result.titulo && result.titulo !== "Sin título" && result.titulo !== "Untitled" && (
           <h2 className="text-2xl font-bold text-stone-800 mb-4 italic">
             &ldquo;{result.titulo}&rdquo;
           </h2>
@@ -64,15 +58,15 @@ export default function Results({ result }: ResultsProps) {
         <div
           className={`mt-2 text-xl font-semibold tracking-wide ${gradeColor(nota)}`}
         >
-          {gradeBadge(nota)}
+          {gradeBadge(nota, t)}
         </div>
-        <p className="text-stone-500 text-sm mt-1">Nota sobre 10</p>
+        <p className="text-stone-500 text-sm mt-1">{t.gradeLabel}</p>
       </div>
 
       {/* Category scores */}
       <div className="bg-stone-50 rounded-2xl p-6 border border-stone-100">
         <h3 className="font-bold text-stone-700 mb-4 text-sm uppercase tracking-wider">
-          Desglose por categorías
+          {t.breakdownTitle}
         </h3>
         <div className="flex flex-col gap-3">
           {result.categorias.map((cat) => (
@@ -90,7 +84,7 @@ export default function Results({ result }: ResultsProps) {
       {/* Feedback bullets */}
       <div>
         <h3 className="font-bold text-stone-700 mb-4 text-sm uppercase tracking-wider">
-          Feedback accionable
+          {t.feedbackTitle}
         </h3>
         <ul className="flex flex-col gap-3">
           {result.feedback.map((item, idx) => (
@@ -107,7 +101,7 @@ export default function Results({ result }: ResultsProps) {
       {/* Synthesis */}
       <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6">
         <h3 className="font-bold text-amber-800 mb-3 text-sm uppercase tracking-wider">
-          Síntesis
+          {t.synthesisTitle}
         </h3>
         <p className="text-stone-700 leading-relaxed">{result.sintesis}</p>
       </div>

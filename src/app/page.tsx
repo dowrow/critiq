@@ -4,8 +4,40 @@ import { useState } from "react";
 import UploadForm from "@/components/UploadForm";
 import Results from "@/components/Results";
 import { CritiqueResult } from "@/lib/openai";
+import { useLang } from "@/context/LangContext";
+
+function LangToggle() {
+  const { lang, setLang } = useLang();
+  return (
+    <div className="flex items-center gap-1 rounded-full border border-stone-200 bg-stone-50 p-0.5 text-xs font-semibold">
+      <button
+        onClick={() => setLang("es")}
+        className={`rounded-full px-2.5 py-1 transition-colors ${
+          lang === "es"
+            ? "bg-amber-600 text-white shadow-sm"
+            : "text-stone-400 hover:text-stone-700"
+        }`}
+        aria-pressed={lang === "es"}
+      >
+        ES
+      </button>
+      <button
+        onClick={() => setLang("en")}
+        className={`rounded-full px-2.5 py-1 transition-colors ${
+          lang === "en"
+            ? "bg-amber-600 text-white shadow-sm"
+            : "text-stone-400 hover:text-stone-700"
+        }`}
+        aria-pressed={lang === "en"}
+      >
+        EN
+      </button>
+    </div>
+  );
+}
 
 export default function Home() {
+  const { t } = useLang();
   const [result, setResult] = useState<CritiqueResult | null>(null);
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
@@ -28,9 +60,12 @@ export default function Home() {
             <span className="text-2xl">✍️</span>
             <span className="font-bold text-xl text-stone-800">critiq</span>
           </div>
-          <span className="text-xs text-stone-400 hidden sm:block">
-            Crítica literaria por IA · Relato breve
-          </span>
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-stone-400 hidden sm:block">
+              {t.tagline}
+            </span>
+            <LangToggle />
+          </div>
         </div>
       </header>
 
@@ -40,35 +75,22 @@ export default function Home() {
             {/* Hero */}
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl font-extrabold text-stone-800 mb-4">
-                Evalúa tu relato
+                {t.heroTitle1}
                 <br />
-                <span className="text-amber-600">con IA</span>
+                <span className="text-amber-600">{t.heroTitle2}</span>
               </h1>
               <p className="text-stone-500 text-lg max-w-xl mx-auto">
-                Sube tu relato (PDF, DOCX o TXT, máximo 100 páginas) y recibe
-                una evaluación detallada con nota y hasta 10 recomendaciones
-                accionables para mejorar tu escritura.
+                {t.heroSubtitle}
               </p>
             </div>
 
             {/* Rubric preview */}
             <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-6">
               <h2 className="font-bold text-stone-700 mb-4 text-sm uppercase tracking-wider">
-                Rúbrica de evaluación
+                {t.rubricTitle}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                {[
-                  { name: "Estructura narrativa", weight: "12%" },
-                  { name: "Voz narrativa y punto de vista", weight: "12%" },
-                  { name: "Personajes", weight: "12%" },
-                  { name: "Conflicto y tensión", weight: "12%" },
-                  { name: "Estilo y lenguaje", weight: "12%" },
-                  { name: "Escena y descripción", weight: "10%" },
-                  { name: "Tema e intención", weight: "10%" },
-                  { name: "Diálogo", weight: "8%" },
-                  { name: "Economía narrativa", weight: "7%" },
-                  { name: "Originalidad y riesgo", weight: "5%" },
-                ].map((cat) => (
+                {t.rubricCategories.map((cat) => (
                   <div
                     key={cat.name}
                     className="flex justify-between items-center py-1.5 px-3 rounded-lg bg-stone-50"
@@ -106,14 +128,14 @@ export default function Home() {
               onClick={handleReset}
               className="mx-auto flex items-center gap-2 text-stone-500 hover:text-amber-600 transition-colors text-sm font-medium"
             >
-              ← Evaluar otro relato
+              {t.backButton}
             </button>
           </div>
         )}
       </main>
 
       <footer className="max-w-3xl mx-auto px-4 py-6 text-center text-xs text-stone-400">
-        critiq · Evaluación literaria por IA · Powered by GPT-4o
+        critiq · {t.footer}
       </footer>
     </div>
   );

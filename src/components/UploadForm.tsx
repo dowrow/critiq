@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, DragEvent, ChangeEvent } from "react";
+import { useLang } from "@/context/LangContext";
 
 interface UploadFormProps {
   onResult: (result: unknown) => void;
@@ -24,6 +25,7 @@ export default function UploadForm({
   onLoading,
   isLoading,
 }: UploadFormProps) {
+  const { t } = useLang();
   const [dragOver, setDragOver] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -31,10 +33,10 @@ export default function UploadForm({
   function validateFile(file: File): string | null {
     const ext = "." + file.name.split(".").pop()?.toLowerCase();
     if (!ACCEPTED_EXTENSIONS.includes(ext) && !ACCEPTED_TYPES.includes(file.type)) {
-      return `Formato no admitido: ${ext}. Usa PDF, DOCX, DOC o TXT.`;
+      return t.unsupportedFormat(ext);
     }
     if (file.size > 50 * 1024 * 1024) {
-      return "El archivo supera el límite de 50 MB.";
+      return t.fileTooLarge;
     }
     return null;
   }
@@ -63,7 +65,7 @@ export default function UploadForm({
 
   async function handleSubmit() {
     if (!selectedFile) {
-      onError("Por favor, selecciona un archivo primero.");
+      onError(t.noFileError);
       return;
     }
 
@@ -83,12 +85,12 @@ export default function UploadForm({
       const data = await res.json();
 
       if (!res.ok) {
-        onError(data.error ?? "Error desconocido al evaluar el relato.");
+        onError(data.error ?? t.unknownError);
       } else {
         onResult(data);
       }
     } catch {
-      onError("Error de red. Verifica tu conexión e inténtalo de nuevo.");
+      onError(t.networkError);
     } finally {
       onLoading(false);
     }
@@ -108,7 +110,7 @@ export default function UploadForm({
         onDrop={handleDrop}
         onClick={() => fileInputRef.current?.click()}
         role="button"
-        aria-label="Área de carga de archivos"
+        aria-label={t.dropzoneLabel}
         tabIndex={0}
         onKeyDown={(e) => e.key === "Enter" && fileInputRef.current?.click()}
       >
@@ -118,7 +120,7 @@ export default function UploadForm({
           accept=".pdf,.docx,.doc,.txt"
           className="sr-only"
           onChange={handleInputChange}
-          aria-label="Selector de archivo"
+          aria-label={t.fileSelectorLabel}
         />
 
         <div className="text-5xl">📄</div>
@@ -127,17 +129,13 @@ export default function UploadForm({
           <div className="text-center">
             <p className="font-semibold text-stone-800">{selectedFile.name}</p>
             <p className="text-sm text-stone-500 mt-1">
-              {(selectedFile.size / 1024).toFixed(1)} KB · Haz clic para cambiar
+              {(selectedFile.size / 1024).toFixed(1)} KB · {t.dropzoneChange}
             </p>
           </div>
         ) : (
           <div className="text-center">
-            <p className="font-semibold text-stone-700">
-              Arrastra tu relato aquí o haz clic para seleccionarlo
-            </p>
-            <p className="text-sm text-stone-500 mt-1">
-              PDF, DOCX, DOC, TXT · Máximo 100 páginas · 50 MB
-            </p>
+            <p className="font-semibold text-stone-700">{t.dropzonePrompt}</p>
+            <p className="text-sm text-stone-500 mt-1">{t.dropzoneHint}</p>
           </div>
         )}
       </div>
@@ -174,10 +172,10 @@ export default function UploadForm({
                 d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
               />
             </svg>
-            Evaluando tu relato…
+            {t.evaluating}
           </span>
         ) : (
-          "Evaluar relato"
+          t.submitButton
         )}
       </button>
     </div>

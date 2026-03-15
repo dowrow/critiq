@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LangProvider } from "@/context/LangContext";
 
 export const metadata: Metadata = {
-  title: "critiq — Crítica literaria por IA",
+  title: "critiq — AI literary critique / Crítica literaria por IA",
   description:
-    "Evalúa tu relato breve con inteligencia artificial. Nota detallada y feedback accionable basado en una rúbrica literaria profesional.",
+    "Evaluate your short story with AI. Detailed grade and actionable feedback based on a professional literary rubric. / Evalúa tu relato con IA.",
 };
 
 export default function RootLayout({
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <LangProvider>{children}</LangProvider>
+      </body>
     </html>
   );
 }
