@@ -73,6 +73,17 @@ export default function Home() {
               <p className={styles.heroSubtitle}>{t.heroSubtitle}</p>
             </div>
 
+            {/* Upload form */}
+            <div className={styles.card}>
+              <UploadForm
+                onResult={handleResult}
+                onError={setError}
+                onLoading={setIsLoading}
+                isLoading={isLoading}
+              />
+              {error && <div className={styles.errorBox}>{error}</div>}
+            </div>
+
             {/* Rubric preview */}
             <div className={styles.card}>
               <h2 className={styles.sectionTitle}>{t.rubricTitle}</h2>
@@ -85,20 +96,12 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
-            {/* Upload form */}
-            <div className={styles.card}>
-              <UploadForm
-                onResult={handleResult}
-                onError={setError}
-                onLoading={setIsLoading}
-                isLoading={isLoading}
-              />
-              {error && <div className={styles.errorBox}>{error}</div>}
-            </div>
           </div>
         ) : (
           <div className={styles.resultsPage}>
+            <button onClick={handleReset} className={styles.backButton}>
+              {t.backButton}
+            </button>
             <div className={styles.resultCard}>
               <Results result={result} />
             </div>

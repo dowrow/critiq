@@ -41,23 +41,23 @@ function ScoreBar({ score }: { score: number }) {
 
 export default function Results({ result }: ResultsProps) {
   const { t } = useLang();
-  const nota = result.nota_final;
-  const colorClass = gradeColorClass(nota);
+  const grade = result.finalGrade;
+  const colorClass = gradeColorClass(grade);
 
   return (
     <div className={styles.results}>
       {/* Title + Grade */}
       <div className={styles.gradeSection}>
-        {result.titulo &&
-          result.titulo !== "Sin título" &&
-          result.titulo !== "Untitled" && (
-            <h2 className={styles.title}>&ldquo;{result.titulo}&rdquo;</h2>
+        {result.title &&
+          result.title !== "Sin título" &&
+          result.title !== "Untitled" && (
+            <h2 className={styles.title}>&ldquo;{result.title}&rdquo;</h2>
           )}
         <div className={`${styles.grade} ${colorClass}`}>
-          {nota.toFixed(1)}
+          {grade.toFixed(1)}
         </div>
         <div className={`${styles.gradeBadge} ${colorClass}`}>
-          {gradeBadge(nota, t)}
+          {gradeBadge(grade, t)}
         </div>
         <p className={styles.gradeLabel}>{t.gradeLabel}</p>
       </div>
@@ -66,25 +66,38 @@ export default function Results({ result }: ResultsProps) {
       <div className={styles.breakdown}>
         <h3 className={styles.sectionTitle}>{t.breakdownTitle}</h3>
         <div className={styles.categories}>
-          {result.categorias.map((cat) => (
-            <div key={cat.nombre}>
+          {result.categories.map((cat) => (
+            <div key={cat.name}>
               <div className={styles.categoryHeader}>
-                <span className={styles.categoryName}>{cat.nombre}</span>
-                <span className={styles.categoryWeight}>{cat.peso}%</span>
+                <span className={styles.categoryName}>{cat.name}</span>
+                <span className={styles.categoryWeight}>{cat.weight}%</span>
               </div>
-              <ScoreBar score={cat.puntuacion} />
+              <ScoreBar score={cat.score} />
             </div>
           ))}
         </div>
       </div>
 
-      {/* Feedback bullets */}
-      <div>
-        <h3 className={styles.sectionTitle}>{t.feedbackTitle}</h3>
+      {/* Best aspects */}
+      <div className={styles.feedbackBest}>
+        <h3 className={styles.sectionTitle}>{t.feedbackBestTitle}</h3>
         <ul className={styles.feedbackList}>
-          {result.feedback.map((item, idx) => (
+          {result.best.map((item, idx) => (
             <li key={idx} className={styles.feedbackItem}>
-              <span className={styles.feedbackNumber}>{idx + 1}</span>
+              <span className={styles.feedbackIcon}>✅</span>
+              <p className={styles.feedbackText}>{item}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Worst aspects */}
+      <div className={styles.feedbackWorst}>
+        <h3 className={styles.sectionTitle}>{t.feedbackWorstTitle}</h3>
+        <ul className={styles.feedbackList}>
+          {result.worst.map((item, idx) => (
+            <li key={idx} className={styles.feedbackItem}>
+              <span className={styles.feedbackIcon}>❌</span>
               <p className={styles.feedbackText}>{item}</p>
             </li>
           ))}
@@ -94,7 +107,7 @@ export default function Results({ result }: ResultsProps) {
       {/* Synthesis */}
       <div className={styles.synthesis}>
         <h3 className={styles.synthesisTitle}>{t.synthesisTitle}</h3>
-        <p className={styles.synthesisText}>{result.sintesis}</p>
+        <p className={styles.synthesisText}>{result.synthesis}</p>
       </div>
     </div>
   );
