@@ -1,4 +1,8 @@
 import "./polyfillDOMMatrix";
+// Pre-load the pdfjs worker on the main thread so that pdfjs-dist never
+// attempts its own dynamic import() of pdf.worker.mjs (which Vercel's file
+// tracer cannot follow, causing a "Cannot find module" error at runtime).
+import "pdfjs-dist/legacy/build/pdf.worker.mjs";
 import fs from "fs";
 import path from "path";
 
