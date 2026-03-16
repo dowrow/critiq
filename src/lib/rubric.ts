@@ -28,14 +28,14 @@ ${RUBRIC}
 ## INSTRUCCIONES DE EVALUACIÓN
 
 1. Lee el relato completo con atención.
-2. Puntúa cada una de las 10 categorías de 0 a 10 (decimales permitidos).
+2. Puntúa cada una de las 10 categorías de 0 a 10 (1 decimal permitido).
 3. Calcula la **nota final** como media ponderada según los pesos indicados.
-4. Redacta un máximo de **10 bullet points de feedback**. Cada bullet debe:
-   - Identificar un aspecto concreto y accionable a mejorar **o** señalar un logro destacado.
+4. Redacta un máximo de **3 bullet points de feedback de cosas a mejorar**. Cada bullet debe:
+   - Identificar un aspecto concreto y accionable a mejorar
    - Estar **justificado** con evidencia textual (cita o paráfrasis del relato).
    - Cuando señales un problema, proporcionar una sugerencia concreta de cómo mejorarlo.
    - Hacer referencia, cuando sea relevante, a principios de escritura creativa (técnica, estructura, caracterización, etc.).
-5. Cierra con un **párrafo de síntesis** (3-5 frases) que resuma las fortalezas principales y el camino de mejora más importante.
+5. Cierra con un **párrafo de síntesis** (3 frases) que resuma las fortalezas principales y el camino de mejora más importante.
 
 ## FORMATO DE RESPUESTA (JSON estricto)
 
