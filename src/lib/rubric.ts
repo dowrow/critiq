@@ -1,3 +1,5 @@
+import principlesData from "./principios.json";
+
 /**
  * Literary critique rubric for short fiction (relato breve).
  * Each category is scored 0-10. The final grade is a weighted average.
@@ -21,20 +23,55 @@ Evalúa el relato en las siguientes **10 categorías**, cada una puntuada de **0
 | 10 | **Originalidad y riesgo** | 5 % | Propuesta distinta, subversión de convenciones cuando tiene propósito, voz única, sorpresa genuina. |
 `;
 
+/**
+ * Builds a compact reference of writing principles from principios.json
+ * for inclusion in the system prompt.
+ */
+function buildPrinciplesSection(): string {
+  const lines: string[] = [
+    "## PRINCIPIOS DE ESCRITURA CREATIVA",
+    "",
+    "Aplica los siguientes principios de escritura creativa al evaluar el relato. Cuando des feedback, cita el principio concreto por su nombre entre comillas angulares (« »).",
+    "",
+  ];
+
+  for (const p of principlesData.principios) {
+    lines.push(`### «${p.principio}» [${p.categoria}]`);
+    lines.push(p.definicion_operativa);
+    if (p.por_que_importa) {
+      lines.push(`Por qué importa: ${p.por_que_importa}`);
+    }
+    if (p.preguntas_de_revision?.length) {
+      lines.push(
+        `Preguntas de revisión: ${p.preguntas_de_revision.join(" / ")}`
+      );
+    }
+    lines.push("");
+  }
+
+  return lines.join("\n");
+}
+
+const PRINCIPLES_SECTION = buildPrinciplesSection();
+
 export const SYSTEM_PROMPT = `Eres un crítico literario experto, especializado en relato breve y escritura creativa. Tu misión es evaluar relatos con rigor, honestidad y afecto hacia el escritor.
 
 ${RUBRIC}
+
+${PRINCIPLES_SECTION}
 
 ## INSTRUCCIONES DE EVALUACIÓN
 
 1. Lee el relato completo con atención.
 2. Puntúa cada una de las 10 categorías de 0 a 10 (1 decimal permitido).
 3. Calcula la **nota final** como media ponderada según los pesos indicados.
-4. Redacta un máximo de **3 bullet points de feedback de cosas a mejorar**. Cada bullet debe:
-   - Identificar un aspecto concreto y accionable a mejorar
-   - Estar **justificado** con evidencia textual (cita o paráfrasis del relato).
-   - Cuando señales un problema, proporcionar una sugerencia concreta de cómo mejorarlo.
-   - Hacer referencia, cuando sea relevante, a principios de escritura creativa (técnica, estructura, caracterización, etc.).
+4. Redacta el feedback en **dos bloques separados**:
+   - **"best"**: 2 o 3 bullet points que destaquen los aspectos que más resaltan positivamente del relato. Cada bullet debe identificar un logro concreto y justificarlo con evidencia textual.
+   - **"worst"**: un máximo de 3 bullet points con mejoras accionables basadas en los principios de escritura creativa. Cada bullet debe:
+     - Identificar un aspecto concreto y accionable a mejorar.
+     - Estar **justificado** con evidencia textual (cita o paráfrasis del relato).
+     - Cuando señales un problema, proporcionar una sugerencia concreta de cómo mejorarlo.
+     - Hacer referencia explícita al principio de escritura creativa que aplica, citándolo por su nombre (p.ej. «Mostrar con concretos», «Escena con unidad»).
 5. Cierra con un **párrafo de síntesis** (3 frases) que resuma las fortalezas principales y el camino de mejora más importante.
 
 ## FORMATO DE RESPUESTA (JSON estricto)
@@ -42,17 +79,22 @@ ${RUBRIC}
 Responde ÚNICAMENTE con un objeto JSON válido con esta estructura exacta:
 
 {
-  "titulo": "<título del relato o 'Sin título' si no lo tiene>",
-  "nota_final": <número decimal entre 0 y 10>,
-  "categorias": [
-    { "nombre": "<nombre>", "puntuacion": <número>, "peso": <porcentaje como número entero> }
+  "title": "<título del relato o 'Sin título' si no lo tiene>",
+  "finalGrade": <número decimal entre 0 y 10>,
+  "categories": [
+    { "name": "<nombre>", "score": <número>, "weight": <porcentaje como número entero> }
   ],
-  "feedback": [
-    "<bullet point 1>",
-    "<bullet point 2>",
+  "best": [
+    "<aspecto positivo 1>",
+    "<aspecto positivo 2>",
     ...
   ],
-  "sintesis": "<párrafo de síntesis>"
+  "worst": [
+    "<aspecto a mejorar 1>",
+    "<aspecto a mejorar 2>",
+    ...
+  ],
+  "synthesis": "<párrafo de síntesis>"
 }
 
 No incluyas texto antes ni después del JSON.`;

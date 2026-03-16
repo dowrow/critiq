@@ -11,17 +11,18 @@ function getOpenAIClient(): OpenAI {
 }
 
 export interface CategoryScore {
-  nombre: string;
-  puntuacion: number;
-  peso: number;
+  name: string;
+  score: number;
+  weight: number;
 }
 
 export interface CritiqueResult {
-  titulo: string;
-  nota_final: number;
-  categorias: CategoryScore[];
-  feedback: string[];
-  sintesis: string;
+  title: string;
+  finalGrade: number;
+  categories: CategoryScore[];
+  best: string[];
+  worst: string[];
+  synthesis: string;
 }
 
 export async function evaluateStory(storyText: string): Promise<CritiqueResult> {
@@ -52,16 +53,18 @@ export async function evaluateStory(storyText: string): Promise<CritiqueResult> 
 
   // Validate required fields
   if (
-    typeof result.nota_final !== "number" ||
-    !Array.isArray(result.categorias) ||
-    !Array.isArray(result.feedback) ||
-    typeof result.sintesis !== "string"
+    typeof result.finalGrade !== "number" ||
+    !Array.isArray(result.categories) ||
+    !Array.isArray(result.best) ||
+    !Array.isArray(result.worst) ||
+    typeof result.synthesis !== "string"
   ) {
     throw new Error("La respuesta de la IA no tiene el formato esperado.");
   }
 
-  // Cap feedback to 10 bullets
-  result.feedback = result.feedback.slice(0, 10);
+  // Cap feedback blocks
+  result.best = result.best.slice(0, 10);
+  result.worst = result.worst.slice(0, 10);
 
   return result;
 }

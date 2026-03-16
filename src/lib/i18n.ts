@@ -51,7 +51,8 @@ export const translations = {
     gradeLabel: "Nota sobre 10",
     gradeBadges: ["Necesita trabajo", "Aprobado", "Suficiente", "Bien", "Notable", "Excelente"],
     breakdownTitle: "Desglose por categorías",
-    feedbackTitle: "Feedback accionable",
+    feedbackBestTitle: "Lo mejor",
+    feedbackWorstTitle: "Lo peor",
     synthesisTitle: "Síntesis",
     untitledStory: "Sin título",
     backButton: "← Evaluar otro relato",
@@ -110,7 +111,8 @@ export const translations = {
     gradeLabel: "Grade out of 10",
     gradeBadges: ["Needs work", "Pass", "Adequate", "Good", "Very good", "Excellent"],
     breakdownTitle: "Category breakdown",
-    feedbackTitle: "Actionable feedback",
+    feedbackBestTitle: "The best",
+    feedbackWorstTitle: "The worst",
     synthesisTitle: "Summary",
     untitledStory: "Untitled",
     backButton: "← Evaluate another story",
@@ -122,11 +124,11 @@ export const translations = {
 
 export type Translations = (typeof translations)[Lang];
 
-export function gradeBadge(nota: number, t: Translations): string {
-  if (nota >= 9) return t.gradeBadges[5];
-  if (nota >= 8) return t.gradeBadges[4];
-  if (nota >= 7) return t.gradeBadges[3];
-  if (nota >= 6) return t.gradeBadges[2];
-  if (nota >= 5) return t.gradeBadges[1];
+export function gradeBadge(grade: number, t: Translations): string {
+  if (grade >= 9) return t.gradeBadges[5];
+  if (grade >= 8) return t.gradeBadges[4];
+  if (grade >= 7) return t.gradeBadges[3];
+  if (grade >= 6) return t.gradeBadges[2];
+  if (grade >= 5) return t.gradeBadges[1];
   return t.gradeBadges[0];
 }
