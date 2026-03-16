@@ -79,12 +79,12 @@ export default function Results({ result }: ResultsProps) {
       </div>
 
       {/* Best aspects */}
-      <div className={styles.feedbackBest}>
+      <div className={styles.feedbackBest} aria-label={t.feedbackBestTitle}>
         <h3 className={styles.sectionTitle}>{t.feedbackBestTitle}</h3>
         <ul className={styles.feedbackList}>
           {result.best.map((item, idx) => (
             <li key={idx} className={styles.feedbackItem}>
-              <span className={styles.feedbackIcon}>✅</span>
+              <span className={styles.feedbackIcon} aria-hidden="true">✅</span>
               <p className={styles.feedbackText}>{item}</p>
             </li>
           ))}
@@ -92,12 +92,12 @@ export default function Results({ result }: ResultsProps) {
       </div>
 
       {/* Worst aspects */}
-      <div className={styles.feedbackWorst}>
+      <div className={styles.feedbackWorst} aria-label={t.feedbackWorstTitle}>
         <h3 className={styles.sectionTitle}>{t.feedbackWorstTitle}</h3>
         <ul className={styles.feedbackList}>
           {result.worst.map((item, idx) => (
             <li key={idx} className={styles.feedbackItem}>
-              <span className={styles.feedbackIcon}>❌</span>
+              <span className={styles.feedbackIcon} aria-hidden="true">❌</span>
               <p className={styles.feedbackText}>{item}</p>
             </li>
           ))}
