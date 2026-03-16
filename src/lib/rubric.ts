@@ -1,3 +1,5 @@
+import principiosData from "./principios.json";
+
 /**
  * Literary critique rubric for short fiction (relato breve).
  * Each category is scored 0-10. The final grade is a weighted average.
@@ -21,9 +23,42 @@ Evalúa el relato en las siguientes **10 categorías**, cada una puntuada de **0
 | 10 | **Originalidad y riesgo** | 5 % | Propuesta distinta, subversión de convenciones cuando tiene propósito, voz única, sorpresa genuina. |
 `;
 
+/**
+ * Builds a compact reference of writing principles from principios.json
+ * for inclusion in the system prompt.
+ */
+function buildPrincipiosSection(): string {
+  const lines: string[] = [
+    "## PRINCIPIOS DE ESCRITURA CREATIVA",
+    "",
+    "Aplica los siguientes principios de escritura creativa al evaluar el relato. Cuando des feedback, cita el principio concreto por su nombre entre comillas.",
+    "",
+  ];
+
+  for (const p of principiosData.principios) {
+    lines.push(`### «${p.principio}» [${p.categoria}]`);
+    lines.push(p.definicion_operativa);
+    if (p.por_que_importa) {
+      lines.push(`Por qué importa: ${p.por_que_importa}`);
+    }
+    if (p.preguntas_de_revision.length > 0) {
+      lines.push(
+        `Preguntas de revisión: ${p.preguntas_de_revision.join(" / ")}`
+      );
+    }
+    lines.push("");
+  }
+
+  return lines.join("\n");
+}
+
+const PRINCIPIOS_SECTION = buildPrincipiosSection();
+
 export const SYSTEM_PROMPT = `Eres un crítico literario experto, especializado en relato breve y escritura creativa. Tu misión es evaluar relatos con rigor, honestidad y afecto hacia el escritor.
 
 ${RUBRIC}
+
+${PRINCIPIOS_SECTION}
 
 ## INSTRUCCIONES DE EVALUACIÓN
 
@@ -31,10 +66,10 @@ ${RUBRIC}
 2. Puntúa cada una de las 10 categorías de 0 a 10 (1 decimal permitido).
 3. Calcula la **nota final** como media ponderada según los pesos indicados.
 4. Redacta un máximo de **3 bullet points de feedback de cosas a mejorar**. Cada bullet debe:
-   - Identificar un aspecto concreto y accionable a mejorar
+   - Identificar un aspecto concreto y accionable a mejorar.
    - Estar **justificado** con evidencia textual (cita o paráfrasis del relato).
    - Cuando señales un problema, proporcionar una sugerencia concreta de cómo mejorarlo.
-   - Hacer referencia, cuando sea relevante, a principios de escritura creativa (técnica, estructura, caracterización, etc.).
+   - Hacer referencia explícita al principio de escritura creativa que aplica, citándolo por su nombre (p.ej. «Mostrar con concretos», «Escena con unidad»).
 5. Cierra con un **párrafo de síntesis** (3 frases) que resuma las fortalezas principales y el camino de mejora más importante.
 
 ## FORMATO DE RESPUESTA (JSON estricto)
