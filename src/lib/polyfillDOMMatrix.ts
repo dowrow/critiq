@@ -261,11 +261,11 @@ if (typeof globalThis.DOMMatrix === "undefined") {
     }
 
     static fromFloat64Array(arr: Float64Array): DOMMatrixPolyfill {
-      return new DOMMatrixPolyfill(Array.from(arr));
+      return new DOMMatrixPolyfill(arr);
     }
 
     static fromFloat32Array(arr: Float32Array): DOMMatrixPolyfill {
-      return new DOMMatrixPolyfill(Array.from(arr));
+      return new DOMMatrixPolyfill(arr);
     }
 
     static fromMatrix(other: DOMMatrixPolyfill): DOMMatrixPolyfill {
