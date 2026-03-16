@@ -1,0 +1,247 @@
+/* ── Page layout ───────────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f5f5f4, #fffbeb);
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.header {
+  border-bottom: 1px solid #e7e5e4;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerInner {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoEmoji {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.logoText {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #292524;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tagline {
+  display: none;
+  font-size: 0.75rem;
+  color: #a8a29e;
+}
+
+@media (min-width: 640px) {
+  .tagline {
+    display: block;
+  }
+}
+
+/* ── Language toggle ─────────────────────────────────────── */
+.langToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 9999px;
+  border: 1px solid #e7e5e4;
+  background: #fafaf9;
+  padding: 2px;
+}
+
+.langBtn {
+  border-radius: 9999px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: #a8a29e;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+.langBtn:hover {
+  color: #44403c;
+}
+
+.langBtnActive {
+  background: #d97706;
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Main content ────────────────────────────────────────── */
+.main {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+
+/* ── Upload page ─────────────────────────────────────────── */
+.uploadPage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #292524;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 640px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+}
+
+.heroAccent {
+  color: #d97706;
+}
+
+.heroSubtitle {
+  color: #78716c;
+  font-size: 1.125rem;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f5f5f4;
+  padding: 1.5rem;
+}
+
+/* ── Section title ────────────────────────────────────────── */
+.sectionTitle {
+  font-weight: 700;
+  color: #44403c;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Rubric grid ─────────────────────────────────────────── */
+.rubricGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .rubricGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.rubricItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  background: #fafaf9;
+}
+
+.rubricName {
+  color: #57534e;
+}
+
+.rubricWeight {
+  color: #d97706;
+  font-weight: 600;
+}
+
+/* ── Results page ────────────────────────────────────────── */
+.resultsPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resultCard {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f5f5f4;
+  padding: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .resultCard {
+    padding: 2rem;
+  }
+}
+
+.backButton {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #78716c;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.backButton:hover {
+  color: #d97706;
+}
+
+/* ── Error box ───────────────────────────────────────────── */
+.errorBox {
+  margin-top: 1rem;
+  border-radius: 0.75rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 1rem;
+  color: #b91c1c;
+  font-size: 0.875rem;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.footer {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #a8a29e;
+}
