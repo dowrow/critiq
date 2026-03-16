@@ -45,40 +45,13 @@ export default function UploadForm({
     return null;
   }
 
-  function handleFileSelect(file: File) {
-    const error = validateFile(file);
-    if (error) {
-      onError(error);
-      return;
-    }
-    setSelectedFile(file);
-    onError("");
-  }
-
-  function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (file) handleFileSelect(file);
-  }
-
-  function handleDrop(e: DragEvent<HTMLDivElement>) {
-    e.preventDefault();
-    setDragOver(false);
-    const file = e.dataTransfer.files?.[0];
-    if (file) handleFileSelect(file);
-  }
-
-  async function handleSubmit() {
-    if (!selectedFile) {
-      onError(t.noFileError);
-      return;
-    }
-
+  async function submitFile(file: File) {
     onLoading(true);
     onError("");
     onResult(null);
 
     const formData = new FormData();
-    formData.append("file", selectedFile);
+    formData.append("file", file);
 
     try {
       const res = await fetch("/api/evaluate", {
@@ -100,12 +73,31 @@ export default function UploadForm({
     }
   }
 
+  function handleFileSelect(file: File) {
+    const error = validateFile(file);
+    if (error) {
+      onError(error);
+      return;
+    }
+    setSelectedFile(file);
+    onError("");
+    submitFile(file);
+  }
+
+  function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (file) handleFileSelect(file);
+  }
+
+  function handleDrop(e: DragEvent<HTMLDivElement>) {
+    e.preventDefault();
+    setDragOver(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file) handleFileSelect(file);
+  }
+
   const dropzoneClass = `${styles.dropzone} ${
     dragOver ? styles.dropzoneOver : styles.dropzoneDefault
-  }`;
-
-  const submitBtnClass = `${styles.submitBtn} ${
-    isLoading || !selectedFile ? styles.submitBtnDisabled : styles.submitBtnActive
   }`;
 
   return (
@@ -136,7 +128,33 @@ export default function UploadForm({
 
         <div className={styles.icon}>📄</div>
 
-        {selectedFile ? (
+        {isLoading ? (
+          <div className={styles.loadingInfo}>
+            <p className={styles.fileName}>{selectedFile?.name}</p>
+            <span className={styles.spinner}>
+              <svg
+                className={styles.spinnerIcon}
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <circle
+                  style={{ opacity: 0.25 }}
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  style={{ opacity: 0.75 }}
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                />
+              </svg>
+              {t.evaluating}
+            </span>
+          </div>
+        ) : selectedFile ? (
           <div className={styles.fileInfo}>
             <p className={styles.fileName}>{selectedFile.name}</p>
             <p className={styles.fileMeta}>
@@ -147,43 +165,19 @@ export default function UploadForm({
           <div className={styles.prompt}>
             <p className={styles.promptText}>{t.dropzonePrompt}</p>
             <p className={styles.promptHint}>{t.dropzoneHint}</p>
+            <button
+              type="button"
+              className={styles.selectBtn}
+              onClick={(e) => {
+                e.stopPropagation();
+                fileInputRef.current?.click();
+              }}
+            >
+              {t.selectFile}
+            </button>
           </div>
         )}
       </div>
-
-      {/* Submit button */}
-      <button
-        onClick={handleSubmit}
-        disabled={isLoading || !selectedFile}
-        className={submitBtnClass}
-      >
-        {isLoading ? (
-          <span className={styles.spinner}>
-            <svg
-              className={styles.spinnerIcon}
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <circle
-                style={{ opacity: 0.25 }}
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="4"
-              />
-              <path
-                style={{ opacity: 0.75 }}
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-              />
-            </svg>
-            {t.evaluating}
-          </span>
-        ) : (
-          t.submitButton
-        )}
-      </button>
     </div>
   );
 }
