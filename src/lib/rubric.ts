@@ -31,7 +31,7 @@ function buildPrincipiosSection(): string {
   const lines: string[] = [
     "## PRINCIPIOS DE ESCRITURA CREATIVA",
     "",
-    "Aplica los siguientes principios de escritura creativa al evaluar el relato. Cuando des feedback, cita el principio concreto por su nombre entre comillas.",
+    "Aplica los siguientes principios de escritura creativa al evaluar el relato. Cuando des feedback, cita el principio concreto por su nombre entre comillas angulares (« »).",
     "",
   ];
 
@@ -41,7 +41,7 @@ function buildPrincipiosSection(): string {
     if (p.por_que_importa) {
       lines.push(`Por qué importa: ${p.por_que_importa}`);
     }
-    if (p.preguntas_de_revision.length > 0) {
+    if (p.preguntas_de_revision?.length) {
       lines.push(
         `Preguntas de revisión: ${p.preguntas_de_revision.join(" / ")}`
       );
