@@ -147,3 +147,85 @@
     transform: rotate(360deg);
   }
 }
+
+/* ── "or" divider ────────────────────────────────────────── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: #d6d3d1;
+}
+
+.dividerText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #78716c;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── URL input row ───────────────────────────────────────── */
+.urlForm {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  border: 2px solid #d6d3d1;
+  padding: 0.625rem 0.75rem;
+  background: #fafaf9;
+  transition: border-color 0.15s;
+}
+
+.urlForm:focus-within {
+  border-color: #fbbf24;
+}
+
+.urlIcon {
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.urlInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 0.9375rem;
+  color: #292524;
+  outline: none;
+  min-width: 0;
+}
+
+.urlInput::placeholder {
+  color: #a8a29e;
+}
+
+.urlBtn {
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  padding: 0.4375rem 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #fff;
+  background: #d97706;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.urlBtn:hover:not(:disabled) {
+  background: #b45309;
+}
+
+.urlBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
