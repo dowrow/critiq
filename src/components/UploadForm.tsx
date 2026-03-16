@@ -111,6 +111,7 @@ export default function UploadForm({
         }}
         onDragLeave={() => setDragOver(false)}
         onDrop={handleDrop}
+        onClick={() => fileInputRef.current?.click()}
         role="button"
         aria-label={t.dropzoneLabel}
         tabIndex={0}

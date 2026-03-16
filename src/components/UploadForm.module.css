@@ -16,7 +16,7 @@
   border-radius: 1rem;
   border: 2px dashed;
   padding: 2.5rem;
-  cursor: default;
+  cursor: pointer;
   transition: border-color 0.15s, background 0.15s;
   outline: none;
 }
