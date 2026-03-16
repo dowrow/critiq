@@ -29,9 +29,10 @@ export const translations = {
     // Upload form
     dropzoneLabel: "Área de carga de archivos",
     fileSelectorLabel: "Selector de archivo",
-    dropzonePrompt: "Arrastra tu relato aquí o haz clic para seleccionarlo",
+    dropzonePrompt: "Arrastra tu relato aquí",
     dropzoneHint: "PDF, DOCX, DOC, TXT · Máximo 100 páginas · 50 MB",
     dropzoneChange: "Haz clic para cambiar",
+    selectFile: "Seleccionar archivo",
     submitButton: "Evaluar relato",
     evaluating: "Evaluando tu relato…",
     noFileError: "Por favor, selecciona un archivo primero.",
@@ -82,9 +83,10 @@ export const translations = {
     // Upload form
     dropzoneLabel: "File upload area",
     fileSelectorLabel: "File selector",
-    dropzonePrompt: "Drag your story here or click to select it",
+    dropzonePrompt: "Drag your story here",
     dropzoneHint: "PDF, DOCX, DOC, TXT · Up to 100 pages · 50 MB",
     dropzoneChange: "Click to change",
+    selectFile: "Select file",
     submitButton: "Evaluate story",
     evaluating: "Evaluating your story…",
     noFileError: "Please select a file first.",
