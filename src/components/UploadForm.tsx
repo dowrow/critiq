@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, DragEvent, ChangeEvent } from "react";
+import { useState, useRef, DragEvent, ChangeEvent, FormEvent } from "react";
 import { useLang } from "@/context/LangContext";
 import styles from "./UploadForm.module.css";
 
@@ -29,6 +29,7 @@ export default function UploadForm({
   const { t } = useLang();
   const [dragOver, setDragOver] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [urlValue, setUrlValue] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   function validateFile(file: File): string | null {
@@ -73,6 +74,32 @@ export default function UploadForm({
     }
   }
 
+  async function submitUrl(url: string) {
+    onLoading(true);
+    onError("");
+    onResult(null);
+
+    try {
+      const res = await fetch("/api/evaluate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        onError(data.error ?? t.unknownError);
+      } else {
+        onResult(data);
+      }
+    } catch {
+      onError(t.networkError);
+    } finally {
+      onLoading(false);
+    }
+  }
+
   function handleFileSelect(file: File) {
     const error = validateFile(file);
     if (error) {
@@ -80,6 +107,7 @@ export default function UploadForm({
       return;
     }
     setSelectedFile(file);
+    setUrlValue("");
     onError("");
     submitFile(file);
   }
@@ -94,6 +122,23 @@ export default function UploadForm({
     setDragOver(false);
     const file = e.dataTransfer.files?.[0];
     if (file) handleFileSelect(file);
+  }
+
+  function handleUrlSubmit(e: FormEvent) {
+    e.preventDefault();
+    const trimmed = urlValue.trim();
+    if (!trimmed) return;
+
+    try {
+      new URL(trimmed);
+    } catch {
+      onError(t.invalidUrl);
+      return;
+    }
+
+    setSelectedFile(null);
+    onError("");
+    submitUrl(trimmed);
   }
 
   const dropzoneClass = `${styles.dropzone} ${
@@ -128,7 +173,7 @@ export default function UploadForm({
 
         <div className={styles.icon}>📄</div>
 
-        {isLoading ? (
+        {isLoading && !urlValue ? (
           <div className={styles.loadingInfo}>
             <p className={styles.fileName}>{selectedFile?.name}</p>
             <span className={styles.spinner}>
@@ -178,6 +223,56 @@ export default function UploadForm({
           </div>
         )}
       </div>
+
+      {/* Divider */}
+      <div className={styles.divider}>
+        <span className={styles.dividerLine} />
+        <span className={styles.dividerText}>{t.orDivider}</span>
+        <span className={styles.dividerLine} />
+      </div>
+
+      {/* URL input */}
+      <form className={styles.urlForm} onSubmit={handleUrlSubmit}>
+        <div className={styles.urlIcon}>🔗</div>
+        <input
+          type="url"
+          className={styles.urlInput}
+          placeholder={t.urlPlaceholder}
+          value={urlValue}
+          onChange={(e) => setUrlValue(e.target.value)}
+          disabled={isLoading}
+          aria-label={t.urlLabel}
+        />
+        <button
+          type="submit"
+          className={styles.urlBtn}
+          disabled={isLoading || !urlValue.trim()}
+        >
+          {isLoading && urlValue ? (
+            <svg
+              className={styles.spinnerIcon}
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <circle
+                style={{ opacity: 0.25 }}
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              />
+              <path
+                style={{ opacity: 0.75 }}
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+              />
+            </svg>
+          ) : (
+            t.evaluateUrl
+          )}
+        </button>
+      </form>
     </div>
   );
 }
