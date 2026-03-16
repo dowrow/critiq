@@ -1,0 +1,1095 @@
+{
+  "version": "2.0",
+  "corpus": {
+    "total_documentos": 33,
+    "colecciones": [
+      {
+        "nombre": "La escritura desatada",
+        "documentos": 11
+      },
+      {
+        "nombre": "Relato breve",
+        "documentos": 22
+      }
+    ],
+    "criterio_de_sintesis": "Se mantiene la granularidad de la V1. No se han fusionado más principios; la mejora consiste en enriquecer cada principio con definición operativa, matiz, contraejemplo, preguntas de revisión, ejercicio y ejemplo.",
+    "tipo_de_ejemplos": "Ejemplos reformulados para uso práctico, no citas literales extensas del material."
+  },
+  "documentos": [
+    {
+      "id": "LD01",
+      "titulo": "El bloqueo del escritor",
+      "coleccion": "La escritura desatada",
+      "resumen": "Explora el bloqueo como una fricción normal del proceso creativo y propone separar el impulso creador del juicio crítico para poder escribir antes de corregir.",
+      "ideas_clave": [
+        "separar creador y crítico",
+        "aceptar el bloqueo como parte del oficio",
+        "usar rutinas o detonantes para arrancar"
+      ],
+      "principios_relacionados": [
+        "separar-creacion-y-correccion"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Explora el bloqueo como una fricción normal del proceso creativo y propone separar el impulso creador del juicio crítico para poder escribir antes de corregir."
+    },
+    {
+      "id": "LD02",
+      "titulo": "El primer resplandor",
+      "coleccion": "La escritura desatada",
+      "resumen": "Se centra en cómo reconocer la chispa inicial de una historia: una intuición o imagen con potencia emocional que merece desarrollarse aunque todavía no esté del todo clara.",
+      "ideas_clave": [
+        "la intuición selecciona historias",
+        "buscar resonancia interior",
+        "empezar desde una imagen o impulso fértil"
+      ],
+      "principios_relacionados": [
+        "seguir-la-chispa-con-resonancia"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Se centra en cómo reconocer la chispa inicial de una historia: una intuición o imagen con potencia emocional que merece desarrollarse aunque todavía no esté del todo clara."
+    },
+    {
+      "id": "LD03",
+      "titulo": "Los personajes de la historia",
+      "coleccion": "La escritura desatada",
+      "resumen": "Trabaja la creación de personajes como núcleos de deseo, conflicto y acción, más definidos por lo que quieren y hacen que por una ficha estática.",
+      "ideas_clave": [
+        "el personaje se define por su deseo",
+        "la conducta revela carácter",
+        "el conflicto nace de fricciones entre personajes"
+      ],
+      "principios_relacionados": [
+        "personaje-definido-por-deseo"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Trabaja la creación de personajes como núcleos de deseo, conflicto y acción, más definidos por lo que quieren y hacen que por una ficha estática."
+    },
+    {
+      "id": "LD04",
+      "titulo": "El plagio creativo",
+      "coleccion": "La escritura desatada",
+      "resumen": "Defiende la apropiación transformadora de estructuras, motivos y relatos previos como motor legítimo de invención, siempre que el material se rehaga con una mirada propia.",
+      "ideas_clave": [
+        "reutilizar estructuras narrativas",
+        "abstraer un cuento y reescribirlo",
+        "transformar influencias en voz propia"
+      ],
+      "principios_relacionados": [
+        "transformar-influencias",
+        "patrones-arquetipicos"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Defiende la apropiación transformadora de estructuras, motivos y relatos previos como motor legítimo de invención, siempre que el material se rehaga con una mirada propia."
+    },
+    {
+      "id": "LD05",
+      "titulo": "La construcción de la escena",
+      "coleccion": "La escritura desatada",
+      "resumen": "Define la escena como unidad de acción, tiempo y espacio, y explica cómo hacerla funcionar dramáticamente mediante objetivos, tensiones y cambios visibles.",
+      "ideas_clave": [
+        "unidad de acción, tiempo y espacio",
+        "la escena debe mover algo",
+        "cada escena necesita tensión interna"
+      ],
+      "principios_relacionados": [
+        "escena-con-unidad",
+        "cada-escena-debe-cambiar-algo"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Define la escena como unidad de acción, tiempo y espacio, y explica cómo hacerla funcionar dramáticamente mediante objetivos, tensiones y cambios visibles."
+    },
+    {
+      "id": "LD06",
+      "titulo": "El cuento, según Poe",
+      "coleccion": "La escritura desatada",
+      "resumen": "Recupera la poética de Poe para el cuento: unidad de efecto, concentración, intensidad y subordinación de cada elemento a un impacto final único.",
+      "ideas_clave": [
+        "unidad de efecto",
+        "brevedad e intensidad",
+        "todo detalle debe servir al efecto total"
+      ],
+      "principios_relacionados": [
+        "unidad-de-efecto"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Recupera la poética de Poe para el cuento: unidad de efecto, concentración, intensidad y subordinación de cada elemento a un impacto final único."
+    },
+    {
+      "id": "LD07",
+      "titulo": "El espacio narrativo",
+      "coleccion": "La escritura desatada",
+      "resumen": "Analiza el espacio como un componente activo del relato: no solo ubica la acción, también define atmósfera, condiciona conductas y puede funcionar como fuerza dramática.",
+      "ideas_clave": [
+        "el espacio construye atmósfera",
+        "describir con función",
+        "el lugar afecta al personaje"
+      ],
+      "principios_relacionados": [
+        "detalle-significativo",
+        "espacio-activo"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Analiza el espacio como un componente activo del relato: no solo ubica la acción, también define atmósfera, condiciona conductas y puede funcionar como fuerza dramática."
+    },
+    {
+      "id": "LD08",
+      "titulo": "La escritura experimental",
+      "coleccion": "La escritura desatada",
+      "resumen": "Invita a explorar formas no convencionales, restricciones y procedimientos de juego para expandir posibilidades expresivas sin perder sentido literario.",
+      "ideas_clave": [
+        "experimentar con procedimientos",
+        "usar restricciones creativas",
+        "romper hábitos para descubrir formas nuevas"
+      ],
+      "principios_relacionados": [
+        "experimentar-con-control"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Invita a explorar formas no convencionales, restricciones y procedimientos de juego para expandir posibilidades expresivas sin perder sentido literario."
+    },
+    {
+      "id": "LD09",
+      "titulo": "El tiempo es un reloj a medida",
+      "coleccion": "La escritura desatada",
+      "resumen": "Estudia el tiempo narrativo como una herramienta moldeable: el relato no reproduce la cronología real, sino que la reorganiza para producir sentido y emoción.",
+      "ideas_clave": [
+        "el tiempo se diseña",
+        "orden, duración y frecuencia",
+        "la manipulación temporal crea efecto"
+      ],
+      "principios_relacionados": [
+        "tiempo-moldeable"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Estudia el tiempo narrativo como una herramienta moldeable: el relato no reproduce la cronología real, sino que la reorganiza para producir sentido y emoción."
+    },
+    {
+      "id": "LD10",
+      "titulo": "El cuento, según Chéjov",
+      "coleccion": "La escritura desatada",
+      "resumen": "Se apoya en Chéjov para defender un cuento atento a la complejidad humana, menos cerrado y más sugerente, donde importan la ambigüedad, la vida interior y el detalle significativo.",
+      "ideas_clave": [
+        "matiz y ambigüedad",
+        "humanidad de los personajes",
+        "finales no mecánicos"
+      ],
+      "principios_relacionados": [
+        "humanidad-y-sugerencia",
+        "cerrar-con-resonancia"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Se apoya en Chéjov para defender un cuento atento a la complejidad humana, menos cerrado y más sugerente, donde importan la ambigüedad, la vida interior y el detalle significativo."
+    },
+    {
+      "id": "LD11",
+      "titulo": "La memoria literaria",
+      "coleccion": "La escritura desatada",
+      "resumen": "Plantea la memoria como cantera narrativa: las vivencias, lecturas y sensaciones personales se transforman en ficción cuando dejan de copiar la anécdota y captan su verdad emocional.",
+      "ideas_clave": [
+        "usar la memoria como materia prima",
+        "transformar autobiografía en ficción",
+        "buscar verdad emocional más que exactitud"
+      ],
+      "principios_relacionados": [
+        "memoria-como-mina"
+      ],
+      "enfoque": "oficio y fundamentos",
+      "aporte_central": "Plantea la memoria como cantera narrativa: las vivencias, lecturas y sensaciones personales se transforman en ficción cuando dejan de copiar la anécdota y captan su verdad emocional."
+    },
+    {
+      "id": "RB01",
+      "titulo": "Deseo y narración",
+      "coleccion": "Relato breve",
+      "resumen": "Propone que toda historia se organiza en torno a un personaje que quiere algo, y que el deseo es el motor mínimo del relato.",
+      "ideas_clave": [
+        "todo relato gira sobre un deseo",
+        "el deseo orienta la acción",
+        "sin deseo no hay dirección narrativa"
+      ],
+      "principios_relacionados": [
+        "personaje-definido-por-deseo"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Propone que toda historia se organiza en torno a un personaje que quiere algo, y que el deseo es el motor mínimo del relato."
+    },
+    {
+      "id": "RB02",
+      "titulo": "¿Quién cuenta la historia?",
+      "coleccion": "Relato breve",
+      "resumen": "Repasa tipos de narrador y muestra cómo el punto de vista decide cuánta información recibe el lector y desde qué sesgo emocional la recibe.",
+      "ideas_clave": [
+        "elegir narrador según efecto",
+        "el punto de vista limita o amplía información",
+        "la voz condiciona la experiencia del lector"
+      ],
+      "principios_relacionados": [
+        "narrador-como-dispositivo"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Repasa tipos de narrador y muestra cómo el punto de vista decide cuánta información recibe el lector y desde qué sesgo emocional la recibe."
+    },
+    {
+      "id": "RB03",
+      "titulo": "Lo abstracto y lo concreto",
+      "coleccion": "Relato breve",
+      "resumen": "Defiende el paso de conceptos abstractos a imágenes, acciones y sensaciones concretas para volver el texto visible y creíble.",
+      "ideas_clave": [
+        "mostrar en vez de decir",
+        "bajar del concepto al detalle",
+        "la concreción encarna la emoción"
+      ],
+      "principios_relacionados": [
+        "mostrar-con-concretos"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Defiende el paso de conceptos abstractos a imágenes, acciones y sensaciones concretas para volver el texto visible y creíble."
+    },
+    {
+      "id": "RB04",
+      "titulo": "Ver para creer",
+      "coleccion": "Relato breve",
+      "resumen": "Insiste en que el lector entra en una historia por detalles físicos y visuales capaces de volver tangible una situación, un personaje o un lugar.",
+      "ideas_clave": [
+        "el detalle vuelve visible el relato",
+        "objetos y lugares generan credibilidad",
+        "lo inesperado revitaliza la escena"
+      ],
+      "principios_relacionados": [
+        "mostrar-con-concretos",
+        "detalle-significativo"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Insiste en que el lector entra en una historia por detalles físicos y visuales capaces de volver tangible una situación, un personaje o un lugar."
+    },
+    {
+      "id": "RB05",
+      "titulo": "La estructura clásica del relato",
+      "coleccion": "Relato breve",
+      "resumen": "Expone la lógica clásica de planteamiento, desarrollo y desenlace como una arquitectura eficaz para ordenar causas, obstáculos y resolución.",
+      "ideas_clave": [
+        "estructura tripartita",
+        "causalidad narrativa",
+        "ordenar la progresión dramática"
+      ],
+      "principios_relacionados": [
+        "estructura-causal"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Expone la lógica clásica de planteamiento, desarrollo y desenlace como una arquitectura eficaz para ordenar causas, obstáculos y resolución."
+    },
+    {
+      "id": "RB06",
+      "titulo": "El conflicto y el cambio",
+      "coleccion": "Relato breve",
+      "resumen": "Explica que el relato necesita fricción: algo se opone al deseo del personaje y esa resistencia produce transformación, fracaso o revelación.",
+      "ideas_clave": [
+        "el conflicto hace avanzar la historia",
+        "la resistencia define el drama",
+        "el personaje debe cambiar o revelarse"
+      ],
+      "principios_relacionados": [
+        "conflicto-y-transformacion"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Explica que el relato necesita fricción: algo se opone al deseo del personaje y esa resistencia produce transformación, fracaso o revelación."
+    },
+    {
+      "id": "RB07",
+      "titulo": "Vidas minúsculas",
+      "coleccion": "Relato breve",
+      "resumen": "Reivindica personajes no grandilocuentes y muestra que una vida aparentemente pequeña puede sostener un relato poderoso si contiene verdad, matiz y singularidad.",
+      "ideas_clave": [
+        "importan las vidas ordinarias",
+        "la singularidad está en el enfoque",
+        "un personaje mínimo puede ser central"
+      ],
+      "principios_relacionados": [
+        "valor-de-lo-ordinario"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Reivindica personajes no grandilocuentes y muestra que una vida aparentemente pequeña puede sostener un relato poderoso si contiene verdad, matiz y singularidad."
+    },
+    {
+      "id": "RB08",
+      "titulo": "La primera frase",
+      "coleccion": "Relato breve",
+      "resumen": "Estudia los arranques narrativos y cómo una primera frase puede abrir conflicto, promesa, tono, intriga o música verbal desde el primer golpe.",
+      "ideas_clave": [
+        "el comienzo crea una promesa",
+        "la primera frase fija tono y atención",
+        "conviene empezar con energía significativa"
+      ],
+      "principios_relacionados": [
+        "comenzar-con-promesa"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Estudia los arranques narrativos y cómo una primera frase puede abrir conflicto, promesa, tono, intriga o música verbal desde el primer golpe."
+    },
+    {
+      "id": "RB09",
+      "titulo": "La tensión narrativa",
+      "coleccion": "Relato breve",
+      "resumen": "Reúne estrategias para sostener la atención del lector mediante incertidumbre, demora, amenaza, preguntas abiertas y administración de información.",
+      "ideas_clave": [
+        "tensión como gestión de expectativas",
+        "dosificar información",
+        "sostener preguntas activas"
+      ],
+      "principios_relacionados": [
+        "administrar-informacion"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Reúne estrategias para sostener la atención del lector mediante incertidumbre, demora, amenaza, preguntas abiertas y administración de información."
+    },
+    {
+      "id": "RB10",
+      "titulo": "El arte de terminar",
+      "coleccion": "Relato breve",
+      "resumen": "Analiza qué hace satisfactorio un final: cierre con sentido, sorpresa compatible con el tono previo y resonancia más allá del último punto.",
+      "ideas_clave": [
+        "cerrar sin traicionar el relato",
+        "evitar finales previsibles o arbitrarios",
+        "buscar resonancia final"
+      ],
+      "principios_relacionados": [
+        "cerrar-con-resonancia"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Analiza qué hace satisfactorio un final: cierre con sentido, sorpresa compatible con el tono previo y resonancia más allá del último punto."
+    },
+    {
+      "id": "RB11",
+      "titulo": "Aventureros",
+      "coleccion": "Relato breve",
+      "resumen": "Revisa claves del relato de aventuras: viaje, búsqueda, antagonismo, peligro, aliados y una estructura sostenida por acción y tensión continua.",
+      "ideas_clave": [
+        "viaje y búsqueda",
+        "peligro constante",
+        "estructura orientada al avance"
+      ],
+      "principios_relacionados": [
+        "genero-como-maquina"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Revisa claves del relato de aventuras: viaje, búsqueda, antagonismo, peligro, aliados y una estructura sostenida por acción y tensión continua."
+    },
+    {
+      "id": "RB12",
+      "titulo": "Memoria y creatividad",
+      "coleccion": "Relato breve",
+      "resumen": "Conecta recuerdo e invención: recordar no es copiar el pasado, sino usarlo como detonante para producir nuevas formas narrativas.",
+      "ideas_clave": [
+        "recordar para inventar",
+        "la memoria deforma productivamente",
+        "la experiencia personal se vuelve material literario"
+      ],
+      "principios_relacionados": [
+        "memoria-como-mina"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Conecta recuerdo e invención: recordar no es copiar el pasado, sino usarlo como detonante para producir nuevas formas narrativas."
+    },
+    {
+      "id": "RB13",
+      "titulo": "Pilares para la casa",
+      "coleccion": "Relato breve",
+      "resumen": "Describe las unidades narrativas —escena, sumario, pausa, elipsis— y cómo combinarlas para regular claridad, velocidad, equilibrio y legibilidad.",
+      "ideas_clave": [
+        "combinar unidades narrativas",
+        "regular velocidad del discurso",
+        "componer con equilibrio"
+      ],
+      "principios_relacionados": [
+        "estructura-causal",
+        "escena-con-unidad",
+        "tiempo-moldeable"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Describe las unidades narrativas —escena, sumario, pausa, elipsis— y cómo combinarlas para regular claridad, velocidad, equilibrio y legibilidad."
+    },
+    {
+      "id": "RB14",
+      "titulo": "Los buenos diálogos",
+      "coleccion": "Relato breve",
+      "resumen": "Ofrece principios para escribir diálogos con naturalidad, síntesis y función, evitando tanto la literalidad del habla real como la rigidez artificiosa.",
+      "ideas_clave": [
+        "diálogo verosímil pero depurado",
+        "cada voz debe caracterizar",
+        "el diálogo debe hacer algo"
+      ],
+      "principios_relacionados": [
+        "dialogo-depurado"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Ofrece principios para escribir diálogos con naturalidad, síntesis y función, evitando tanto la literalidad del habla real como la rigidez artificiosa."
+    },
+    {
+      "id": "RB15",
+      "titulo": "Construir una escena",
+      "coleccion": "Relato breve",
+      "resumen": "Profundiza en la escena como módulo básico del relato y muestra cómo delimitarla, encadenarla y hacer que produzca avance dramático.",
+      "ideas_clave": [
+        "escena como unidad mínima",
+        "encadenar escenas con lógica",
+        "cada escena modifica la situación"
+      ],
+      "principios_relacionados": [
+        "escena-con-unidad",
+        "cada-escena-debe-cambiar-algo"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Profundiza en la escena como módulo básico del relato y muestra cómo delimitarla, encadenarla y hacer que produzca avance dramático."
+    },
+    {
+      "id": "RB16",
+      "titulo": "La ficción criminal",
+      "coleccion": "Relato breve",
+      "resumen": "Explica la lógica del relato criminal, centrado en crimen, investigación, móviles y curiosidad del lector como motor estructural.",
+      "ideas_clave": [
+        "quién, por qué y cómo",
+        "la curiosidad mueve el género",
+        "gestión estratégica de pistas"
+      ],
+      "principios_relacionados": [
+        "administrar-informacion",
+        "genero-como-maquina"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Explica la lógica del relato criminal, centrado en crimen, investigación, móviles y curiosidad del lector como motor estructural."
+    },
+    {
+      "id": "RB17",
+      "titulo": "Cómo dar muerte a los personajes",
+      "coleccion": "Relato breve",
+      "resumen": "Usa la muerte y el tono para mostrar que el impacto de un suceso depende menos del hecho bruto que de la actitud narrativa con que se cuenta.",
+      "ideas_clave": [
+        "el tono transforma el efecto",
+        "la muerte tiene función dramática",
+        "no basta el acontecimiento: importa cómo se cuenta"
+      ],
+      "principios_relacionados": [
+        "tono-como-actitud"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Usa la muerte y el tono para mostrar que el impacto de un suceso depende menos del hecho bruto que de la actitud narrativa con que se cuenta."
+    },
+    {
+      "id": "RB18",
+      "titulo": "El reloj secreto",
+      "coleccion": "Relato breve",
+      "resumen": "Profundiza en los usos del tiempo: saltos, compresión, ralentización y reordenación de la cronología para intensificar el relato.",
+      "ideas_clave": [
+        "jugar con el orden temporal",
+        "variar velocidad",
+        "crear sentido mediante montaje temporal"
+      ],
+      "principios_relacionados": [
+        "tiempo-moldeable"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Profundiza en los usos del tiempo: saltos, compresión, ralentización y reordenación de la cronología para intensificar el relato."
+    },
+    {
+      "id": "RB19",
+      "titulo": "El niño que hemos sido",
+      "coleccion": "Relato breve",
+      "resumen": "Se centra en la literatura infantil y en la necesidad de escribir para lectores jóvenes sin condescendencia, desde una imaginación viva y una perspectiva genuina.",
+      "ideas_clave": [
+        "escribir para infancia sin infantilizar",
+        "claridad no es simpleza",
+        "conectar con asombro y experiencia infantil"
+      ],
+      "principios_relacionados": [
+        "genero-como-maquina",
+        "escribir-para-infancia-sin-condescendencia"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Se centra en la literatura infantil y en la necesidad de escribir para lectores jóvenes sin condescendencia, desde una imaginación viva y una perspectiva genuina."
+    },
+    {
+      "id": "RB20",
+      "titulo": "El espacio (I)",
+      "coleccion": "Relato breve",
+      "resumen": "Amplía la reflexión sobre el espacio: el escenario no es decorado neutro, sino un elemento que informa sobre personajes, atmósfera y conflicto.",
+      "ideas_clave": [
+        "espacio como significado",
+        "atmósfera y ambientación",
+        "el lugar puede actuar como antagonista"
+      ],
+      "principios_relacionados": [
+        "detalle-significativo",
+        "espacio-activo"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Amplía la reflexión sobre el espacio: el escenario no es decorado neutro, sino un elemento que informa sobre personajes, atmósfera y conflicto."
+    },
+    {
+      "id": "RB21",
+      "titulo": "El ritmo de la prosa",
+      "coleccion": "Relato breve",
+      "resumen": "Estudia la cadencia de la prosa narrativa y cómo sintaxis, puntuación, longitud de frase y variación construyen fluidez, énfasis y tono.",
+      "ideas_clave": [
+        "la prosa debe sonar bien",
+        "el ritmo nace de la sintaxis",
+        "variar fraseo para modular efecto"
+      ],
+      "principios_relacionados": [
+        "ritmo-de-prosa"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Estudia la cadencia de la prosa narrativa y cómo sintaxis, puntuación, longitud de frase y variación construyen fluidez, énfasis y tono."
+    },
+    {
+      "id": "RB22",
+      "titulo": "De Pulgarcito a La guerra de las galaxias",
+      "coleccion": "Relato breve",
+      "resumen": "Introduce la morfología del cuento de Propp para detectar funciones estructurales comunes y usarlas o subvertirlas conscientemente.",
+      "ideas_clave": [
+        "patrones narrativos recurrentes",
+        "funciones de Propp",
+        "aprender estructura para repetirla o desviarla"
+      ],
+      "principios_relacionados": [
+        "transformar-influencias",
+        "genero-como-maquina",
+        "patrones-arquetipicos"
+      ],
+      "enfoque": "técnica del relato breve",
+      "aporte_central": "Introduce la morfología del cuento de Propp para detectar funciones estructurales comunes y usarlas o subvertirlas conscientemente."
+    }
+  ],
+  "principios": [
+    {
+      "slug": "separar-creacion-y-correccion",
+      "principio": "Separar la fase de creación de la fase crítica",
+      "categoria": "proceso creativo",
+      "definicion_operativa": "Durante el borrador conviene privilegiar la producción de material; la evaluación y la poda llegan después, en una pasada distinta.",
+      "por_que_importa": "Si el juicio entra demasiado pronto, la página se bloquea y la historia no llega a adquirir forma suficiente para ser trabajada.",
+      "matiz": "No se trata de eliminar al crítico, sino de cambiarlo de turno: primero inventa, luego corrige.",
+      "contraejemplo": "Pararte en cada frase para pulirla cuando todavía no sabes qué escena estás escribiendo.",
+      "preguntas_de_revision": [
+        "¿Estoy intentando corregir antes de descubrir qué quiere la escena?",
+        "¿La autocensura me está dejando sin material?",
+        "¿He reservado una segunda pasada real para editar?"
+      ],
+      "ejercicio": "Escribe durante 12 minutos una escena sin borrar nada. Después haz una pausa breve y dedica otros 12 a cortar, ordenar y afinar.",
+      "ejemplo": "Primero redactas de un tirón la discusión entre dos hermanas; después vuelves y eliminas repeticiones, aclaras quién domina la escena y mejoras el remate.",
+      "documentos_origen": [
+        "El bloqueo del escritor"
+      ]
+    },
+    {
+      "slug": "seguir-la-chispa-con-resonancia",
+      "principio": "Elegir historias que produzcan una resonancia interna",
+      "categoria": "idea germinal",
+      "definicion_operativa": "La mejor semilla narrativa no siempre es la más original en abstracto, sino la que deja una imagen, una incomodidad o una pregunta que insiste.",
+      "por_que_importa": "Esa insistencia emocional suele dar energía de trabajo, tono y dirección cuando todavía no existe una trama cerrada.",
+      "matiz": "No hace falta entender la historia entera desde el principio; basta con reconocer que hay ahí una zona viva.",
+      "contraejemplo": "Escoger una premisa muy ingeniosa en teoría pero que no te provoca ninguna curiosidad sostenida.",
+      "preguntas_de_revision": [
+        "¿Qué imagen o pregunta no se me va de la cabeza?",
+        "¿La idea me da ganas de escribir escenas o solo de explicarla?",
+        "¿Hay una vibración emocional reconocible detrás de la premisa?"
+      ],
+      "ejercicio": "Haz una lista de diez ideas. Subraya las tres que traigan ya una imagen, un conflicto o una emoción. Desarrolla solo la que siga viva al día siguiente.",
+      "ejemplo": "Entre “una mudanza” y “un hombre vacía la casa de su madre y encuentra cartas que ella nunca llegó a enviar”, eliges la segunda porque ya contiene misterio y carga afectiva.",
+      "documentos_origen": [
+        "El primer resplandor"
+      ]
+    },
+    {
+      "slug": "personaje-definido-por-deseo",
+      "principio": "El personaje se define sobre todo por lo que quiere",
+      "categoria": "personaje",
+      "definicion_operativa": "Un personaje se vuelve narrativamente legible cuando persigue algo, teme perder algo o intenta reparar una carencia.",
+      "por_que_importa": "El deseo organiza decisiones, conflictos, prioridades y contradicciones; convierte una figura descrita en una fuerza en movimiento.",
+      "matiz": "El deseo no tiene que ser épico: puede ser mínimo, secreto o incluso vergonzoso.",
+      "contraejemplo": "Presentar una ficha muy detallada del personaje sin mostrar qué está buscando ni qué está dispuesto a hacer.",
+      "preguntas_de_revision": [
+        "¿Qué quiere exactamente este personaje en esta historia?",
+        "¿Qué obstáculo convierte ese deseo en motor dramático?",
+        "¿Qué revela de él la forma en que persigue lo que quiere?"
+      ],
+      "ejercicio": "Resume a tu protagonista con esta fórmula: “Quiere ___, pero ___, así que ___”. Luego escribe una escena donde ese esquema se vea sin explicarlo.",
+      "ejemplo": "No dices solo que el portero es reservado: lo muestras aceptando cubrir una noche extra porque necesita reunir dinero para traer a su hijo.",
+      "documentos_origen": [
+        "Los personajes de la historia",
+        "Deseo y narración"
+      ]
+    },
+    {
+      "slug": "transformar-influencias",
+      "principio": "Tomar estructuras ajenas y transformarlas en material propio",
+      "categoria": "tradición e influencia",
+      "definicion_operativa": "Las historias heredadas pueden usarse como esqueleto: se extrae su mecanismo y se reencarna en otro contexto, conflicto, tono o imaginario.",
+      "por_que_importa": "Trabajar con modelos previos da apoyo estructural y, a la vez, obliga a encontrar una mirada singular sobre algo reconocible.",
+      "matiz": "La transformación valiosa afecta al sentido, no solo a la decoración superficial.",
+      "contraejemplo": "Cambiar nombres y escenarios de una historia conocida sin alterar de verdad su lógica ni su mirada.",
+      "preguntas_de_revision": [
+        "¿Qué mecanismo estructural estoy tomando prestado?",
+        "¿Qué cambia de verdad al trasladarlo a mi mundo?",
+        "¿Mi versión añade una pregunta nueva o solo imita?"
+      ],
+      "ejercicio": "Elige un cuento tradicional. Reescríbelo cambiando época, conflicto central y tipo de protagonista, pero conserva una función estructural básica.",
+      "ejemplo": "Usas la lógica de “la prueba imposible” de un cuento popular para narrar la selección brutal de becarios en una gran consultora.",
+      "documentos_origen": [
+        "El plagio creativo",
+        "De Pulgarcito a La guerra de las galaxias"
+      ]
+    },
+    {
+      "slug": "unidad-de-efecto",
+      "principio": "Hacer que cada elemento sirva a un efecto global",
+      "categoria": "arquitectura del cuento",
+      "definicion_operativa": "En el cuento breve conviene orientar escenas, tono, ritmo, imágenes y desenlace hacia una impresión dominante.",
+      "por_que_importa": "La brevedad gana potencia cuando no se dispersa; cada elemento suma hacia una experiencia compacta en el lector.",
+      "matiz": "Unidad no significa monotonía: puede haber variaciones, siempre que no rompan la dirección emocional del conjunto.",
+      "contraejemplo": "Introducir chistes, subtramas o escenas ornamentales que enfrían la impresión principal del cuento.",
+      "preguntas_de_revision": [
+        "¿Qué efecto quiero dejar al final?",
+        "¿Qué partes del texto no alimentan ese efecto?",
+        "¿Hay algún cambio de tono que rompa la concentración?"
+      ],
+      "ejercicio": "Define en una frase el efecto dominante de tu cuento. Revisa cada escena y marca si intensifica, desvía o debilita ese objetivo.",
+      "ejemplo": "Si tu cuento busca inquietud, escoges detalles ambiguos, sintaxis contenida y un final que no alivie del todo la amenaza.",
+      "documentos_origen": [
+        "El cuento, según Poe"
+      ]
+    },
+    {
+      "slug": "humanidad-y-sugerencia",
+      "principio": "Favorecer la complejidad humana sobre la moraleja cerrada",
+      "categoria": "poética del cuento",
+      "definicion_operativa": "Un relato puede aspirar a mostrar la vida moral y afectiva en su ambigüedad, sin cerrar del todo el sentido con una tesis obvia.",
+      "por_que_importa": "La sugerencia deja respirar al lector y permite que la historia siga trabajando después del final.",
+      "matiz": "Ambigüedad no es confusión: el texto debe ser inteligible aunque no agote todas sus implicaciones.",
+      "contraejemplo": "Forzar un cierre donde el cuento explica quién tenía razón y cuál era la enseñanza correcta.",
+      "preguntas_de_revision": [
+        "¿Estoy dejando espacio para la complejidad del personaje?",
+        "¿El final ilumina o sermonea?",
+        "¿La emoción del cuento depende de una explicación final excesiva?"
+      ],
+      "ejercicio": "Escribe un final en el que el personaje haga algo revelador pero no lo explique. Comprueba si el lector puede sentir el sentido sin que se lo dictes.",
+      "ejemplo": "La hija no perdona a su padre ni lo condena verbalmente: solo le devuelve una llave y se marcha, dejando que el gesto cargue el significado.",
+      "documentos_origen": [
+        "El cuento, según Chéjov"
+      ]
+    },
+    {
+      "slug": "memoria-como-mina",
+      "principio": "Usar la memoria como cantera, no como copia literal",
+      "categoria": "memoria y experiencia",
+      "definicion_operativa": "Los recuerdos sirven como materia prima emocional, sensorial o simbólica, pero la ficción exige transformación y montaje.",
+      "por_que_importa": "La memoria aporta densidad concreta y verdad afectiva; la invención evita que el texto quede preso de la anécdota privada.",
+      "matiz": "Ser fiel a una emoción suele ser más fértil que ser fiel a una cronología exacta.",
+      "contraejemplo": "Trasladar un recuerdo tal cual, confiando en que su importancia personal baste para volverlo interesante para otros.",
+      "preguntas_de_revision": [
+        "¿Qué verdad emocional del recuerdo quiero conservar?",
+        "¿Qué puedo deformar, condensar o inventar para que funcione mejor?",
+        "¿El texto depende demasiado de que el lector conozca mi biografía?"
+      ],
+      "ejercicio": "Escribe un recuerdo en versión factual. Luego reescríbelo cambiando lugar, edad o relación entre personajes, pero manteniendo la emoción central.",
+      "ejemplo": "Una comida familiar real se transforma en una cena de despedida ficticia donde la tensión entre hermanos concentra mejor lo que te interesa.",
+      "documentos_origen": [
+        "La memoria literaria",
+        "Memoria y creatividad"
+      ]
+    },
+    {
+      "slug": "mostrar-con-concretos",
+      "principio": "Traducir lo abstracto a acciones, imágenes y sensaciones concretas",
+      "categoria": "lenguaje narrativo",
+      "definicion_operativa": "Las ideas generales ganan fuerza cuando se encarnan en gestos, objetos, escenas, sonidos, temperaturas o decisiones observables.",
+      "por_que_importa": "Lo concreto vuelve visible la experiencia y permite que el lector la deduzca en vez de recibirla como una etiqueta.",
+      "matiz": "No todo debe mostrarse siempre; a veces resumir es útil, pero los momentos clave necesitan encarnación sensible.",
+      "contraejemplo": "Escribir “estaba deprimido” o “su relación era mala” sin aportar indicios materiales o conductuales.",
+      "preguntas_de_revision": [
+        "¿Qué puede ver u oír el lector aquí?",
+        "¿Estoy nombrando una emoción en vez de dramatizarla?",
+        "¿Qué imagen concreta sustituye mejor esta abstracción?"
+      ],
+      "ejercicio": "Subraya en una página todos los sustantivos abstractos. Reescribe tres de ellos como acciones o detalles físicos.",
+      "ejemplo": "En vez de decir que la pareja estaba rota, muestras que cenan en silencio mirando cada uno su móvil y dejan la mesa sin recoger.",
+      "documentos_origen": [
+        "Lo abstracto y lo concreto",
+        "Ver para creer"
+      ]
+    },
+    {
+      "slug": "detalle-significativo",
+      "principio": "Elegir detalles visibles y funcionales",
+      "categoria": "descripción",
+      "definicion_operativa": "Los detalles más eficaces no son los más abundantes, sino los que revelan atmósfera, carácter o conflicto con economía.",
+      "por_que_importa": "Un buen detalle activa la imaginación del lector y evita la descripción genérica o puramente decorativa.",
+      "matiz": "Un detalle puede ser pequeño y aun así organizar la escena si está bien elegido.",
+      "contraejemplo": "Alinear una larga lista de rasgos del decorado o del personaje que no modifican la lectura de la situación.",
+      "preguntas_de_revision": [
+        "¿Qué revela este detalle además de su apariencia?",
+        "¿Estoy describiendo por llenar o por orientar la lectura?",
+        "¿Bastaría con dos o tres detalles más precisos?"
+      ],
+      "ejercicio": "Describe un lugar con solo tres detalles. Oblígate a que uno hable del pasado, otro del presente y otro del conflicto latente.",
+      "ejemplo": "Para mostrar precariedad no enumeras todo el piso: basta con la persiana rota, el olor a humedad y la nevera sujeta con cinta americana.",
+      "documentos_origen": [
+        "Ver para creer",
+        "El espacio narrativo",
+        "El espacio (I)"
+      ]
+    },
+    {
+      "slug": "estructura-causal",
+      "principio": "Construir el relato como una cadena de causas y consecuencias",
+      "categoria": "estructura",
+      "definicion_operativa": "Cada bloque narrativo debería nacer de lo anterior y modificar lo siguiente; el relato avanza porque algo provoca otra cosa.",
+      "por_que_importa": "La causalidad da sensación de necesidad y evita que la historia parezca una mera sucesión de episodios.",
+      "matiz": "No todo tiene que explicarse del todo, pero sí conviene que las acciones principales generen consecuencias legibles.",
+      "contraejemplo": "Encadenar escenas interesantes que podrían cambiarse de orden sin alterar el sentido del relato.",
+      "preguntas_de_revision": [
+        "¿Qué provoca esta escena en la siguiente?",
+        "¿Si elimino este fragmento se rompe la cadena o no pasa nada?",
+        "¿Las decisiones del personaje generan consecuencias reales?"
+      ],
+      "ejercicio": "Resume el cuento en diez pasos unidos por “por eso”. Si no puedes enlazarlos, localiza dónde falla la causalidad.",
+      "ejemplo": "La protagonista miente para conseguir trabajo; por eso la ponen a prueba; por eso debe sostener la mentira y se complica el conflicto.",
+      "documentos_origen": [
+        "La estructura clásica del relato",
+        "Pilares para la casa"
+      ]
+    },
+    {
+      "slug": "conflicto-y-transformacion",
+      "principio": "Toda historia necesita una fricción que obligue al personaje a revelarse o cambiar",
+      "categoria": "conflicto",
+      "definicion_operativa": "El relato gana forma cuando un deseo encuentra resistencia y fuerza al personaje a actuar, ceder, aprender o fracasar.",
+      "por_que_importa": "Sin fricción no hay pruebas, y sin pruebas el personaje apenas se manifiesta ante el lector.",
+      "matiz": "El cambio puede ser interno, irónico, parcial o incluso negativo; no siempre equivale a madurez.",
+      "contraejemplo": "Construir una historia donde todo sale según lo previsto y el protagonista termina igual que empezó.",
+      "preguntas_de_revision": [
+        "¿Qué se opone al deseo principal?",
+        "¿Qué decisión difícil debe tomar el personaje?",
+        "¿Qué ha cambiado entre el inicio y el final, aunque sea mínimamente?"
+      ],
+      "ejercicio": "Escribe el mismo argumento en dos líneas: una sin obstáculo y otra con obstáculo. Quédate con la segunda y complícala un paso más.",
+      "ejemplo": "Quiere pedir perdón a su hermano, pero este va a vender la casa esa misma tarde; la urgencia fuerza una confrontación que ambos evitaban.",
+      "documentos_origen": [
+        "El conflicto y el cambio"
+      ]
+    },
+    {
+      "slug": "valor-de-lo-ordinario",
+      "principio": "Las vidas aparentemente pequeñas también sostienen relatos grandes",
+      "categoria": "personaje y enfoque",
+      "definicion_operativa": "Una historia no necesita hechos extraordinarios si encuentra singularidad, tensión y verdad en personajes comunes.",
+      "por_que_importa": "Amplía el campo narrativo y evita confundir importancia literaria con espectacularidad argumental.",
+      "matiz": "Lo ordinario no funciona por sí solo: necesita mirada, selección y conflicto.",
+      "contraejemplo": "Pensar que una vida humilde basta para interesar al lector aunque no haya observación precisa ni tensión interna.",
+      "preguntas_de_revision": [
+        "¿Qué vuelve única esta vida en apariencia modesta?",
+        "¿Dónde está el conflicto específico, no genérico?",
+        "¿Estoy confiando en el tema o en la ejecución?"
+      ],
+      "ejercicio": "Escribe una escena crucial en la vida de alguien corriente sin usar sucesos extremos. Apóyate en deseo, detalle y subtexto.",
+      "ejemplo": "Una cajera decide no devolver una llamada importante durante su descanso y ese pequeño acto reordena su relación con la madre.",
+      "documentos_origen": [
+        "Vidas minúsculas"
+      ]
+    },
+    {
+      "slug": "comenzar-con-promesa",
+      "principio": "La primera frase debe abrir una promesa de relato",
+      "categoria": "comienzo",
+      "definicion_operativa": "El arranque debería activar una expectativa: de conflicto, tono, rareza, voz, pregunta o movimiento.",
+      "por_que_importa": "La primera frase negocia con el lector las condiciones de lectura y orienta desde el principio cómo debe escuchar la historia.",
+      "matiz": "No todas las aperturas necesitan espectacularidad; también puede prometer mucho una frase sobria con una tensión latente.",
+      "contraejemplo": "Empezar con información genérica o contextual que no crea ninguna curiosidad ni energía narrativa.",
+      "preguntas_de_revision": [
+        "¿Qué promesa abre esta primera frase?",
+        "¿Presenta voz, conflicto, extrañeza o movimiento?",
+        "¿Podría pertenecer a cualquier historia?"
+      ],
+      "ejercicio": "Escribe cinco primeras frases para el mismo cuento: una desde el conflicto, otra desde la voz, otra desde la imagen, otra desde la rareza y otra desde la acción.",
+      "ejemplo": "“Mi padre dejó de hablarme el día que aprendí a imitar su firma.” La frase ya abre relación, conflicto y una expectativa causal.",
+      "documentos_origen": [
+        "La primera frase"
+      ]
+    },
+    {
+      "slug": "administrar-informacion",
+      "principio": "La tensión nace de cómo se dosifica la información",
+      "categoria": "tensión narrativa",
+      "definicion_operativa": "Narrar también consiste en decidir qué sabe el lector, cuándo lo sabe y desde qué ángulo lo recibe.",
+      "por_que_importa": "La curiosidad y el suspense dependen menos del secreto en sí que de la administración de pistas, lagunas y demoras.",
+      "matiz": "Ocultar no siempre significa quitar datos; a veces basta con mostrar un dato sin su explicación o desde una perspectiva sesgada.",
+      "contraejemplo": "Contarlo todo demasiado pronto o, al revés, esconder tanto que el lector deja de orientarse.",
+      "preguntas_de_revision": [
+        "¿Qué pregunta quiero que sostenga la lectura?",
+        "¿Estoy entregando la respuesta antes de tiempo?",
+        "¿La información retenida genera interés o solo confusión?"
+      ],
+      "ejercicio": "Separa en tres columnas lo que sabe el personaje, lo que sabe el lector y lo que se revelará más tarde. Ajusta las diferencias.",
+      "ejemplo": "El lector ve a una mujer limpiar sangre del asiento del coche antes de saber de quién es y qué ha ocurrido.",
+      "documentos_origen": [
+        "La tensión narrativa",
+        "La ficción criminal"
+      ]
+    },
+    {
+      "slug": "cerrar-con-resonancia",
+      "principio": "El final debe cerrar con sentido, no solo terminar",
+      "categoria": "final",
+      "definicion_operativa": "Un buen final reorganiza lo anterior, confirma o tuerce una promesa del relato y deja una vibración posterior.",
+      "por_que_importa": "El cierre decide la forma definitiva del cuento en la memoria del lector.",
+      "matiz": "Cerrar no equivale a explicarlo todo; puede quedar apertura, siempre que exista una sensación de necesidad o culminación.",
+      "contraejemplo": "Acabar en seco por agotamiento, o añadir una explicación tardía para “rematar” lo que ya estaba dicho.",
+      "preguntas_de_revision": [
+        "¿Qué cambia en la lectura de lo anterior cuando llego al final?",
+        "¿El remate nace del cuento o se nota impuesto?",
+        "¿El último gesto deja eco o solo apaga la historia?"
+      ],
+      "ejercicio": "Escribe tres finales para el mismo relato: uno conclusivo, uno sugerente y uno irónico. Elige el que mejor prolongue el sentido del conjunto.",
+      "ejemplo": "Tras intentar huir todo el cuento, el protagonista vuelve voluntariamente a la casa: el gesto final resignifica su conflicto sin necesidad de explicarlo.",
+      "documentos_origen": [
+        "El arte de terminar",
+        "El cuento, según Chéjov"
+      ]
+    },
+    {
+      "slug": "escena-con-unidad",
+      "principio": "Construir escenas con unidad de acción, tiempo y espacio",
+      "categoria": "escena",
+      "definicion_operativa": "La escena funciona como un bloque donde algo sucede aquí y ahora, dentro de un marco temporal y espacial reconocible.",
+      "por_que_importa": "Esa unidad da presencia dramática, hace visible el conflicto y permite que el lector habite el momento.",
+      "matiz": "La escena puede contener complejidad, pero conviene que el lector identifique con claridad quién hace qué, dónde y cuándo.",
+      "contraejemplo": "Mezclar acciones, recuerdos y cambios de lugar sin delimitar el centro dramático del momento.",
+      "preguntas_de_revision": [
+        "¿Cuál es la acción principal de esta escena?",
+        "¿Está claro el marco espacial y temporal?",
+        "¿Se puede resumir en una frase lo que ocurre aquí?"
+      ],
+      "ejercicio": "Define una escena con esta plantilla: alguien quiere algo, en un lugar concreto, durante un lapso concreto, y alguien o algo se lo impide.",
+      "ejemplo": "Una madre espera en el pasillo del hospital durante veinte minutos la salida del cirujano mientras evita responder a su hija.",
+      "documentos_origen": [
+        "La construcción de la escena",
+        "Construir una escena",
+        "Pilares para la casa"
+      ]
+    },
+    {
+      "slug": "cada-escena-debe-cambiar-algo",
+      "principio": "Cada escena debería modificar la situación",
+      "categoria": "progresión dramática",
+      "definicion_operativa": "Al terminar una escena, algo debe haber variado: información, relación, poder, riesgo, decisión o estado emocional.",
+      "por_que_importa": "Sin variación no hay avance, y el relato se vuelve estático aunque haya movimiento superficial.",
+      "matiz": "El cambio puede ser mínimo, pero debe ser perceptible en términos narrativos.",
+      "contraejemplo": "Escenas que repiten el mismo conflicto con palabras distintas sin añadir presión ni consecuencias.",
+      "preguntas_de_revision": [
+        "¿Qué ha cambiado exactamente al final de la escena?",
+        "¿La situación está peor, mejor o simplemente distinta?",
+        "¿Esta escena podría comprimirse en una línea sin perder nada?"
+      ],
+      "ejercicio": "Anota al margen de cada escena una flecha: “entra así / sale así”. Si ambas partes son idénticas, revisa la escena.",
+      "ejemplo": "La entrevista de trabajo no solo muestra nervios: termina con una mentira que obligará al personaje a sostener otra identidad.",
+      "documentos_origen": [
+        "La construcción de la escena",
+        "Construir una escena"
+      ]
+    },
+    {
+      "slug": "narrador-como-dispositivo",
+      "principio": "Elegir narrador y punto de vista según el efecto buscado",
+      "categoria": "voz narrativa",
+      "definicion_operativa": "El narrador no es un trámite técnico, sino un dispositivo de control de información, distancia emocional, sesgo y tono.",
+      "por_que_importa": "La misma historia cambia radicalmente según quién la cuente y cuánto pueda o quiera ver.",
+      "matiz": "No existe un narrador “mejor” en abstracto; existe uno más adecuado para una determinada experiencia de lectura.",
+      "contraejemplo": "Escoger primera o tercera persona por costumbre, sin pensar qué gana o pierde la historia con esa elección.",
+      "preguntas_de_revision": [
+        "¿Quién puede contar mejor esta historia y por qué?",
+        "¿Qué información quiero limitar o enfatizar?",
+        "¿La distancia elegida favorece el tono y la emoción que busco?"
+      ],
+      "ejercicio": "Escribe la misma escena en primera persona, tercera limitada y narrador testigo. Compara qué versión activa mejor el conflicto.",
+      "ejemplo": "Una infidelidad contada por la persona engañada produce sospecha; contada por una vecina curiosa produce ironía y distancia.",
+      "documentos_origen": [
+        "¿Quién cuenta la historia?"
+      ]
+    },
+    {
+      "slug": "dialogo-depurado",
+      "principio": "Escribir diálogos que suenen vivos sin copiar el habla real",
+      "categoria": "diálogo",
+      "definicion_operativa": "El diálogo literario condensa, selecciona y organiza el habla para volverla legible, significativa y cargada de intención.",
+      "por_que_importa": "Un buen diálogo aporta ritmo, conflicto, caracterización y subtexto; uno malo solo reproduce ruido conversacional.",
+      "matiz": "Natural no significa literal: la oralidad escrita exige poda y precisión.",
+      "contraejemplo": "Llenar el diálogo de muletillas, redundancias y explicaciones que la gente real quizá diría, pero que en ficción resultan inertes.",
+      "preguntas_de_revision": [
+        "¿Cada intervención cambia algo o presiona algo?",
+        "¿Se distingue quién habla por intención y ritmo, no solo por la etiqueta?",
+        "¿Estoy metiendo información a la fuerza en boca de los personajes?"
+      ],
+      "ejercicio": "Graba una conversación real, transcríbela y luego redúcela a la mitad manteniendo solo lo que tenga intención dramática.",
+      "ejemplo": "En lugar de reproducir una bronca entera, eliges cuatro réplicas donde se oye el resentimiento sin necesidad de explicitarlo todo.",
+      "documentos_origen": [
+        "Los buenos diálogos"
+      ]
+    },
+    {
+      "slug": "tono-como-actitud",
+      "principio": "El tono es una elección decisiva, no un adorno",
+      "categoria": "tono",
+      "definicion_operativa": "El tono expresa la actitud del relato ante lo que cuenta: grave, irónico, tierno, cruel, sobrio, grotesco.",
+      "por_que_importa": "Un mismo hecho cambia de significado según el tono con que se narre; el tono organiza la respuesta emocional del lector.",
+      "matiz": "Puede haber modulaciones internas, pero conviene que el texto no parezca no saber desde dónde mira.",
+      "contraejemplo": "Narrar una muerte con un tono involuntariamente cómico o alternar solemnidad e ironía sin control.",
+      "preguntas_de_revision": [
+        "¿Desde qué actitud está contado esto?",
+        "¿El tono acompaña o contradice sin querer el contenido?",
+        "¿Las elecciones léxicas y rítmicas son coherentes con esa actitud?"
+      ],
+      "ejercicio": "Escribe el mismo suceso en tono compasivo, satírico y seco. Observa cómo cambian personaje y sentido.",
+      "ejemplo": "La noticia del funeral puede contarse como devastación íntima o como una cadena absurda de trámites; cada opción fabrica un cuento distinto.",
+      "documentos_origen": [
+        "Cómo dar muerte a los personajes"
+      ]
+    },
+    {
+      "slug": "tiempo-moldeable",
+      "principio": "El tiempo narrativo se diseña: se comprime, expande, reordena",
+      "categoria": "tiempo narrativo",
+      "definicion_operativa": "La narración no reproduce el tiempo real: selecciona tramos, salta periodos, ralentiza instantes y reordena secuencias.",
+      "por_que_importa": "Manipular el tiempo permite dirigir atención, intensidad, sorpresa y profundidad causal.",
+      "matiz": "La libertad temporal exige legibilidad: el lector puede perderse si no percibe las transiciones.",
+      "contraejemplo": "Aplicar saltos temporales confusos solo porque “quedan literarios”, sin una función clara.",
+      "preguntas_de_revision": [
+        "¿Qué partes merecen escena y cuáles elipsis o sumario?",
+        "¿Por qué este orden temporal es mejor que la cronología lineal?",
+        "¿El lector puede orientarse sin esfuerzo innecesario?"
+      ],
+      "ejercicio": "Cuenta un mismo argumento de forma lineal y después empezando por el desenlace. Compara qué versión genera más tensión o sentido.",
+      "ejemplo": "Dedicas tres páginas a los diez segundos previos a una llamada y un solo párrafo a los cinco años que vinieron después.",
+      "documentos_origen": [
+        "El tiempo es un reloj a medida",
+        "El reloj secreto",
+        "Pilares para la casa"
+      ]
+    },
+    {
+      "slug": "espacio-activo",
+      "principio": "El espacio debe intervenir en el relato, no quedarse en decorado",
+      "categoria": "espacio narrativo",
+      "definicion_operativa": "El lugar influye en la conducta, la atmósfera, la percepción y las posibilidades de acción de los personajes.",
+      "por_que_importa": "Un espacio activo vuelve más creíble el mundo narrativo y añade capas simbólicas o dramáticas sin discursividad extra.",
+      "matiz": "No todo escenario tiene que ser exuberante; basta con que ejerza una presión reconocible sobre la escena.",
+      "contraejemplo": "Situar la acción en una casa, una calle o un bar indiferenciados que podrían sustituirse por cualquier otro sitio.",
+      "preguntas_de_revision": [
+        "¿Qué hace posible o imposible este lugar?",
+        "¿Cómo afecta el espacio al ánimo o a la conducta del personaje?",
+        "¿El escenario dice algo del mundo social o emocional de la historia?"
+      ],
+      "ejercicio": "Reescribe una escena manteniendo la acción pero cambiando el espacio. Comprueba cómo cambia el conflicto.",
+      "ejemplo": "Una reconciliación no suena igual en una cocina estrecha llena de platos que en un aparcamiento vacío de madrugada.",
+      "documentos_origen": [
+        "El espacio narrativo",
+        "El espacio (I)"
+      ]
+    },
+    {
+      "slug": "ritmo-de-prosa",
+      "principio": "Cuidar la cadencia de la prosa mediante sintaxis, puntuación y variación",
+      "categoria": "estilo",
+      "definicion_operativa": "El ritmo de la prosa surge de la longitud de frase, la distribución de pausas, la repetición, el encabalgamiento sintáctico y la alternancia de velocidades.",
+      "por_que_importa": "El lector no solo entiende un relato: también lo oye internamente. El ritmo modela atención, emoción y tono.",
+      "matiz": "Ritmo no equivale a rapidez; una prosa lenta puede ser muy rítmica si está medida.",
+      "contraejemplo": "Escribir todo con frases del mismo tamaño y la misma cadencia, generando monotonía involuntaria.",
+      "preguntas_de_revision": [
+        "¿La música de la frase acompaña la escena?",
+        "¿Hay variedad suficiente de pausas y longitudes?",
+        "¿Puedo mejorar una emoción tocando solo el ritmo, sin cambiar el sentido?"
+      ],
+      "ejercicio": "Lee en voz alta un párrafo propio y marca dónde te atascas o pierdes aire. Reescribe atendiendo solo a la respiración.",
+      "ejemplo": "Para una persecución acortas frases y recortas nexos; para una escena de duelo permites periodos más amplios y ondulados.",
+      "documentos_origen": [
+        "El ritmo de la prosa"
+      ]
+    },
+    {
+      "slug": "genero-como-maquina",
+      "principio": "Entender las reglas del género permite usarlas o desviarlas",
+      "categoria": "género",
+      "definicion_operativa": "Cada género trae expectativas de conflicto, ritmo, personajes, recompensas y tipos de placer lector; conocerlas ayuda a operar con conciencia.",
+      "por_que_importa": "El género no encorseta necesariamente: también ofrece una máquina de energía narrativa que puede aprovecharse o sabotearse.",
+      "matiz": "Subvertir funciona mejor cuando el lector percibe qué convención está siendo desviada.",
+      "contraejemplo": "Usar la etiqueta de género solo como ambientación externa, sin activar sus promesas estructurales.",
+      "preguntas_de_revision": [
+        "¿Qué espera el lector de este género?",
+        "¿Qué convenciones quiero cumplir y cuáles torcer?",
+        "¿Mi historia obtiene energía de esas expectativas o las ignora?"
+      ],
+      "ejercicio": "Haz una lista de cinco rasgos del género que trabajas. Decide cuáles mantendrás, cuáles ocultarás y cuál invertirás.",
+      "ejemplo": "En un relato criminal mantienes la investigación, pero desplazas el centro del misterio hacia la culpa del detective, no solo hacia el culpable.",
+      "documentos_origen": [
+        "Aventureros",
+        "La ficción criminal",
+        "El niño que hemos sido",
+        "De Pulgarcito a La guerra de las galaxias"
+      ]
+    },
+    {
+      "slug": "escribir-para-infancia-sin-condescendencia",
+      "principio": "Escribir para lectores jóvenes exige claridad, no simpleza",
+      "categoria": "destinatario y registro",
+      "definicion_operativa": "La literatura para infancia o juventud requiere precisión, imaginación y respeto por la inteligencia emocional del lector.",
+      "por_que_importa": "La condescendencia empobrece el texto; la claridad bien trabajada lo vuelve hospitalario sin volverlo bobo.",
+      "matiz": "Adecuar la complejidad al lector no implica rebajar la intensidad de conflicto, humor o extrañeza.",
+      "contraejemplo": "Explicar de más, moralizar o infantilizar el lenguaje pensando que así será “más accesible”.",
+      "preguntas_de_revision": [
+        "¿Estoy escribiendo desde el respeto o desde la superioridad?",
+        "¿La claridad procede de la precisión o de simplificar en exceso?",
+        "¿El texto conserva juego, riesgo e imaginación?"
+      ],
+      "ejercicio": "Reescribe una escena para un lector joven eliminando abstracciones y sermones, pero manteniendo el conflicto y la ambigüedad emocional.",
+      "ejemplo": "Un personaje infantil puede sentir celos, vergüenza o crueldad; no hace falta dulcificarlo, sino contarlo con nitidez y economía.",
+      "documentos_origen": [
+        "El niño que hemos sido"
+      ]
+    },
+    {
+      "slug": "experimentar-con-control",
+      "principio": "La experimentación formal vale si intensifica el sentido",
+      "categoria": "experimentación",
+      "definicion_operativa": "Alterar formato, procedimiento, orden, restricción o dispositivo es fértil cuando la forma elegida produce una experiencia específica y necesaria.",
+      "por_que_importa": "La innovación formal puede abrir caminos de percepción y pensamiento que una forma convencional no lograría.",
+      "matiz": "Lo raro no es valioso por sí mismo; la prueba es si la forma añade precisión, extrañeza productiva o potencia emocional.",
+      "contraejemplo": "Fragmentar, permutar o imponer restricciones solo para parecer original, sin que ello repercuta en la lectura.",
+      "preguntas_de_revision": [
+        "¿Qué gana esta historia con esta forma y qué perdería sin ella?",
+        "¿La dificultad formal produce sentido o solo opacidad?",
+        "¿La rareza está justificada por la experiencia que busco?"
+      ],
+      "ejercicio": "Cuenta una misma escena de forma convencional y luego mediante una restricción formal clara. Compara qué versión trabaja mejor el núcleo del texto.",
+      "ejemplo": "Narrar una ruptura a través de una lista de objetos embalados funciona si cada objeto revela una capa de la relación.",
+      "documentos_origen": [
+        "La escritura experimental"
+      ]
+    },
+    {
+      "slug": "patrones-arquetipicos",
+      "principio": "Reconocer patrones estructurales comunes ayuda a construir y revisar",
+      "categoria": "morfología narrativa",
+      "definicion_operativa": "Detrás de relatos muy distintos pueden repetirse funciones narrativas semejantes: carencia, prueba, ayuda, engaño, retorno, reconocimiento.",
+      "por_que_importa": "Detectar esas funciones permite diagnosticar huecos de estructura y entender por qué ciertas historias se sostienen con tanta solidez.",
+      "matiz": "Conocer patrones no obliga a obedecerlos literalmente; también sirve para desviarlos con conciencia.",
+      "contraejemplo": "Aplicar una plantilla arquetípica de forma mecánica, de modo que la historia parezca prefabricada.",
+      "preguntas_de_revision": [
+        "¿Qué funciones básicas ya están presentes en mi relato?",
+        "¿Hay alguna fase estructural débil o ausente?",
+        "¿Estoy usando el patrón como ayuda o como corsé?"
+      ],
+      "ejercicio": "Toma tu cuento y etiqueta sus funciones principales: falta inicial, llamada, obstáculo, ayuda, prueba, giro, retorno. Observa qué zonas están flacas.",
+      "ejemplo": "Descubres que tu historia tiene una “prueba” y un “retorno”, pero le falta una verdadera carencia inicial; al reforzarla, todo gana dirección.",
+      "documentos_origen": [
+        "De Pulgarcito a La guerra de las galaxias",
+        "El plagio creativo"
+      ]
+    }
+  ]
+}
