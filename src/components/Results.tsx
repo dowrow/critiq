@@ -91,7 +91,7 @@ export default function Results({ result }: ResultsProps) {
         </ul>
       </div>
 
-      {/* Worst aspects */}
+      {/* Possible improvements */}
       <div className={styles.feedbackWorst} aria-label={t.feedbackWorstTitle}>
         <h3 className={styles.sectionTitle}>{t.feedbackWorstTitle}</h3>
         <ul className={styles.feedbackList}>
