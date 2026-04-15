@@ -3,7 +3,14 @@ import { IncomingForm, Files } from "formidable";
 import { IncomingMessage } from "http";
 import { Readable } from "stream";
 import { extractTextFromFile, estimatePages } from "@/lib/extractText";
-import { extractTextFromSubstack } from "@/lib/extractSubstack";
+import {
+  isSubstackUrl,
+  extractTextFromSubstack,
+} from "@/lib/extractSubstack";
+import {
+  isGoogleDocUrl,
+  extractTextFromGoogleDoc,
+} from "@/lib/extractGoogleDoc";
 import { evaluateStory } from "@/lib/openai";
 
 const MAX_PAGES = 100;
@@ -42,7 +49,19 @@ async function handleUrlRequest(req: NextRequest): Promise<NextResponse> {
 
   let storyText: string;
   try {
-    storyText = await extractTextFromSubstack(url);
+    if (isGoogleDocUrl(url)) {
+      storyText = await extractTextFromGoogleDoc(url);
+    } else if (isSubstackUrl(url)) {
+      storyText = await extractTextFromSubstack(url);
+    } else {
+      return NextResponse.json(
+        {
+          error:
+            "URL no compatible. Proporciona un enlace a un artículo de Substack o a un documento público de Google Docs.",
+        },
+        { status: 400 },
+      );
+    }
   } catch (err: unknown) {
     const message =
       err instanceof Error
