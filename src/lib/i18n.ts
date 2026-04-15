@@ -9,7 +9,7 @@ export const translations = {
     heroTitle1: "Evalúa tu relato",
     heroTitle2: "con IA",
     heroSubtitle:
-      "Sube tu relato (PDF, DOCX o TXT, máximo 100 páginas) o pega un enlace a un artículo de Substack y recibe una evaluación detallada con nota y hasta 10 recomendaciones accionables para mejorar tu escritura.",
+      "Sube tu relato (PDF, DOCX o TXT, máximo 100 páginas) o pega un enlace a un artículo de Substack o documento de Google Docs y recibe una evaluación detallada con nota y hasta 10 recomendaciones accionables para mejorar tu escritura.",
 
     // Rubric
     rubricTitle: "Rúbrica de evaluación",
@@ -42,8 +42,8 @@ export const translations = {
       `Formato no admitido: ${ext}. Usa PDF, DOCX, DOC o TXT.`,
     fileTooLarge: "El archivo supera el límite de 50 MB.",
     orDivider: "o",
-    urlPlaceholder: "https://tu-substack.substack.com/p/tu-articulo",
-    urlLabel: "Enlace a artículo de Substack",
+    urlPlaceholder: "https://docs.google.com/document/d/... o Substack",
+    urlLabel: "Enlace a artículo de Substack o documento de Google Docs",
     evaluateUrl: "Evaluar",
     invalidUrl: "La URL proporcionada no es válida.",
 
@@ -69,7 +69,7 @@ export const translations = {
     heroTitle1: "Evaluate your story",
     heroTitle2: "with AI",
     heroSubtitle:
-      "Upload your story (PDF, DOCX or TXT, up to 100 pages) or paste a Substack article link and receive a detailed evaluation with a grade and up to 10 actionable recommendations to improve your writing.",
+      "Upload your story (PDF, DOCX or TXT, up to 100 pages) or paste a Substack article link or Google Docs document link and receive a detailed evaluation with a grade and up to 10 actionable recommendations to improve your writing.",
 
     // Rubric
     rubricTitle: "Evaluation rubric",
@@ -102,8 +102,8 @@ export const translations = {
       `Unsupported format: ${ext}. Use PDF, DOCX, DOC or TXT.`,
     fileTooLarge: "File exceeds the 50 MB limit.",
     orDivider: "or",
-    urlPlaceholder: "https://your-substack.substack.com/p/your-article",
-    urlLabel: "Substack article link",
+    urlPlaceholder: "https://docs.google.com/document/d/... or Substack",
+    urlLabel: "Substack article or Google Docs document link",
     evaluateUrl: "Evaluate",
     invalidUrl: "The provided URL is not valid.",
 
